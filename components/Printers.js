@@ -5,13 +5,13 @@ const template = `
     <div class="col-sm-2">Drucker</div>
     <div class="col-sm-10">
     	<div class="form-check">
-    	  <input v-model="selectedPrinterPath" class="form-check-input" type="radio" name="printer-radio" id="printer-radio-1" value="\\\\SRVMNG\\04-Etikett-Lager1">
+    	  <input v-model="selectedPrinterPath" class="form-check-input" type="radio" name="printer-radio" id="printer-radio-1" value="\\\\SRVMNG\\04-Etikett-Lager1" :disabled="isLoading">
     	  <label class="form-check-label" for="printer-radio-1">
     	    04-Etikett-Lager1
     	  </label>
     	</div>
     	<div class="form-check">
-    	  <input v-model="selectedPrinterPath" class="form-check-input" type="radio" name="printer-radio" id="printer-radio-2" value="\\\\SRVMNG\\05-Etikett-Lager">
+    	  <input v-model="selectedPrinterPath" class="form-check-input" type="radio" name="printer-radio" id="printer-radio-2" value="\\\\SRVMNG\\05-Etikett-Lager" :disabled="isLoading">
     	  <label class="form-check-label" for="printer-radio-2">
     	    05-Etikett-Lager
     	  </label>
@@ -31,11 +31,11 @@ export default {
   created() {
     console.log('Printers: created');
 
-    // this.getLabelPrinterPath();
+    this.getLabelPrinterPath();
   },
   watch: {
     selectedPrinterPath() {
-      // this.setLabelPrinterPath();
+      this.setLabelPrinterPath();
     }
   },
   methods: {
