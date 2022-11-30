@@ -44,7 +44,7 @@ export default {
   },
   watch: {
     selectedPrinterPath() {
-      console.log(selectedPrinterPath);
+      console.log(this.selectedPrinterPath);
 
       this.setLabelPrinterPath();
     }
