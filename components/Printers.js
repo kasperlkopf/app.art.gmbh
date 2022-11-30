@@ -25,10 +25,10 @@ export default {
     this.getLabelPrinterPath();
   },
   watch: {
-    selectedPrinterPath() {
-      console.log(this.selectedPrinterPath);
+    selectedPrinterPath(newVal, oldVal) {
+      console.log(newVal);
 
-      if (this.selectedPrinterPath !== '') {
+      if (oldVal !== '' && newVal !== '') {
         this.setLabelPrinterPath();
       }
     }
