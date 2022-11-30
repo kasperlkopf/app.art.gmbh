@@ -43,7 +43,7 @@ export default {
       this.isLoading = true;
 
       window.axios
-        .get('/myfactory/getLabelPrinterPath?ts=' + Date.now())
+        .get('https://api.art.gmbh/myfactory/getLabelPrinterPath?ts=' + Date.now())
         .then((res) => {
           console.log(res);
         })
@@ -60,7 +60,7 @@ export default {
       const printerPath = this.selectedPrinterPath;
 
       window.axios
-        .get('/myfactory/setLabelPrinterPath', { printerPath })
+        .get('https://api.art.gmbh/myfactory/setLabelPrinterPath', { printerPath })
         .then((res) => {
           console.log(res);
         })
