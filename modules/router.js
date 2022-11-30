@@ -5,7 +5,7 @@ const router = VueRouter.createRouter({
   routes: [
     {
       path: '/lieferprobleme',
-      component: () => import('/DeliveryProblems.js'),
+      component: () => import('/components/DeliveryProblems.js'),
     },
     {
       path: '/printers',
