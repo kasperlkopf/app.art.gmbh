@@ -8,8 +8,8 @@ const router = VueRouter.createRouter({
       component: () => import('/components/DeliveryProblems.js'),
     },
     {
-      path: '/printers',
-      component: () => import('/components/Printers.js'),
+      path: '/warehouse',
+      component: () => import('/components/Warehouse.js'),
     },
   ],
 });

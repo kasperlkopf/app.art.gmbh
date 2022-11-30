@@ -1,4 +1,4 @@
-// Printers.js
+// Warehouse.js
 
 const template = `
   <div class="col-4 mx-auto mt-5">
@@ -12,7 +12,7 @@ const template = `
 `;
 
 export default {
-  name: 'Printers',
+  name: 'Warehouse',
   data() {
     return {
       isLoading: false,
@@ -20,7 +20,7 @@ export default {
     };
   },
   created() {
-    console.log('Printers: created');
+    console.log('Warehouse: created');
 
     this.getLabelPrinterPath();
   },
