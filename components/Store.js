@@ -1,6 +1,6 @@
-// store.js
+// Store.js
 
-const store = Vuex.createStore({
+const Store = Vuex.createStore({
   state() {
     return {
       openDocuments: {
@@ -228,4 +228,4 @@ const store = Vuex.createStore({
   },
 });
 
-export default store;
+export default Store;
