@@ -46,6 +46,8 @@ export default {
         .get('https://api.art.gmbh/myfactory/getLabelPrinterPath?ts=' + Date.now())
         .then((res) => {
           console.log(res);
+
+          this.selectedPrinterPath = res.data.message[0].PrinterPath;
         })
         .catch((err) => {
           console.log(err);
