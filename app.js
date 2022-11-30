@@ -23,34 +23,12 @@ const app = Vue.createApp({
   },
   mounted() {
     console.log('App: mounted');
-
-    this.connectionStatus = 'connecting';
-
-    window.axios
-      .get('https://api.art.gmbh/status/ping-database?' + Date.now())
-      .then((res) => {
-        console.log(res);
-
-        if (res.data.message === 'OK') {
-          this.connectionStatus = 'success';
-        } else {
-          this.connectionStatus = 'error';
-        }
-      })
-      .catch((err) => {
-        this.connectionStatus = 'error';
-        console.log(err);
-      })
-      .finally(() => {
-        //
-      });
   },
   methods: {
     //
   },
 });
 
-// use
 app.use(router);
 app.use(store);
 

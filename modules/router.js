@@ -4,19 +4,14 @@ const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
   routes: [
     {
-      path: '/',
-      redirect: '/lieferprobleme',
-    },
-    {
       path: '/lieferprobleme',
       component: () => import('/DeliveryProblems.js'),
     },
+    {
+      path: '/printers',
+      component: () => import('/components/Printers.js'),
+    },
   ],
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    }
-  },
 });
 
 router.beforeEach((to, from) => {
