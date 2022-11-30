@@ -18,6 +18,15 @@ const template = `
     	</div>
     </div>
   </div>
+
+  <div class="mt-5 mb-3">
+    <label class="form-label">Etikettendrucker Kamil</label>
+    <select v-model="selectedPrinterPath" class="form-select" :disabled="isLoading">
+      <option selected disabled>Drucker auswählen...</option>
+      <option value="\\\\SRVMNG\\04-Etikett-Lager1">04-Etikett-Lager1</option>
+      <option value="\\\\SRVMNG\\05-Etikett-Lager">05-Etikett-Lager</option>
+    </select>
+  </div>
 `;
 
 export default {
@@ -35,6 +44,8 @@ export default {
   },
   watch: {
     selectedPrinterPath() {
+      console.log(selectedPrinterPath);
+
       this.setLabelPrinterPath();
     }
   },
@@ -62,7 +73,7 @@ export default {
       const printerPath = this.selectedPrinterPath;
 
       window.axios
-        .get('https://api.art.gmbh/myfactory/setLabelPrinterPath', { printerPath })
+        .post('https://api.art.gmbh/myfactory/setLabelPrinterPath', { printerPath })
         .then((res) => {
           console.log(res);
         })
