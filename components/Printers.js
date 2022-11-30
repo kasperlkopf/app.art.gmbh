@@ -4,7 +4,7 @@ const template = `
   <div class="col-4 mx-auto mt-5">
     <label class="form-label">Etikettendrucker Kamil</label>
     <select v-model="selectedPrinterPath" class="form-select" :disabled="isLoading">
-      <option selected disabled>Drucker auswählen...</option>
+      <option value="" disabled>Drucker auswählen...</option>
       <option value="\\\\SRVMNG\\04-Etikett-Lager1">04-Etikett-Lager1</option>
       <option value="\\\\SRVMNG\\05-Etikett-Lager">05-Etikett-Lager</option>
     </select>
@@ -28,7 +28,9 @@ export default {
     selectedPrinterPath() {
       console.log(this.selectedPrinterPath);
 
-      this.setLabelPrinterPath();
+      if (this.selectedPrinterPath !== '') {
+        this.setLabelPrinterPath();
+      }
     }
   },
   methods: {
