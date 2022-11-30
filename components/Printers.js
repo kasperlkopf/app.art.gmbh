@@ -1,8 +1,8 @@
 // Printers.js
 
 const template = `
-  <div class="row">
-    <label for="printer" class="col-sm-2 col-form-label">Drucker</label>
+  <div class="row mt-5">
+    <div class="col-sm-2">Drucker</div>
     <div class="col-sm-10">
     	<div class="form-check">
     	  <input v-model="selectedPrinterPath" class="form-check-input" type="radio" name="printer-radio" id="printer-radio-1" value="\\\\SRVMNG\\04-Etikett-Lager1">
@@ -12,7 +12,7 @@ const template = `
     	</div>
     	<div class="form-check">
     	  <input v-model="selectedPrinterPath" class="form-check-input" type="radio" name="printer-radio" id="printer-radio-2" value="\\\\SRVMNG\\05-Etikett-Lager">
-    	  <label class="form-check-label" for="printer-radio-1">
+    	  <label class="form-check-label" for="printer-radio-2">
     	    05-Etikett-Lager
     	  </label>
     	</div>
