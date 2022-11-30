@@ -1,25 +1,7 @@
 // Printers.js
 
 const template = `
-  <div class="row mt-5">
-    <div class="col-sm-2">Drucker</div>
-    <div class="col-sm-10">
-    	<div class="form-check">
-    	  <input v-model="selectedPrinterPath" class="form-check-input" type="radio" name="printer-radio" id="printer-radio-1" value="\\\\SRVMNG\\04-Etikett-Lager1" :disabled="isLoading">
-    	  <label class="form-check-label" for="printer-radio-1">
-    	    04-Etikett-Lager1
-    	  </label>
-    	</div>
-    	<div class="form-check">
-    	  <input v-model="selectedPrinterPath" class="form-check-input" type="radio" name="printer-radio" id="printer-radio-2" value="\\\\SRVMNG\\05-Etikett-Lager" :disabled="isLoading">
-    	  <label class="form-check-label" for="printer-radio-2">
-    	    05-Etikett-Lager
-    	  </label>
-    	</div>
-    </div>
-  </div>
-
-  <div class="mt-5 mb-3">
+  <div class="col-4 mx-auto mt-5">
     <label class="form-label">Etikettendrucker Kamil</label>
     <select v-model="selectedPrinterPath" class="form-select" :disabled="isLoading">
       <option selected disabled>Drucker auswählen...</option>
