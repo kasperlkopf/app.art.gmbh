@@ -15,6 +15,10 @@ const router = VueRouter.createRouter({
       path: '/warehouse',
       component: () => import('/components/Warehouse.js'),
     },
+    {
+      path: '/turnover',
+      component: () => import('/components/Turnover.js'),
+    },
   ],
 });
 
