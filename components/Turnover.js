@@ -1,13 +1,15 @@
 // Turnover.js
 
+import SharedMethods from '/components/SharedMethods.js';
+
 const template = `
-  <div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+  <div class="row row-cols-1 row-cols-md-3 mt-5">
 
     <div class="col">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Jahresumsatz</h5>
-          <p class="card-text">{{ yearlyTurnover }}</p>
+          <p class="card-text">{{ formatNumbersLocal(yearlyTurnover, 2) }} €</p>
         </div>
       </div>
     </div>
@@ -16,7 +18,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Monatsumsatz</h5>
-          <p class="card-text">{{ monthlyTurnover }}</p>
+          <p class="card-text">{{ formatNumbersLocal(monthlyTurnover, 2) }} €</p>
         </div>
       </div>
     </div>
@@ -25,7 +27,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Tagesumsatz</h5>
-          <p class="card-text">{{ dailyTurnover }}</p>
+          <p class="card-text">{{ formatNumbersLocal(dailyTurnover, 2) }} €</p>
         </div>
       </div>
     </div>
@@ -35,6 +37,7 @@ const template = `
 
 export default {
   name: 'Turnover',
+  mixins: [SharedMethods],
   data() {
     return {
       isLoading: false,
