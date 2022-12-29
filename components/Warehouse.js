@@ -1,7 +1,7 @@
 // Warehouse.js
 
 const template = `
-  <div class="col-12 col-sm-6 col-lg-4 mx-auto">
+  <div class="col-12 col-md-6">
     <label class="form-label">Etikettendrucker Kamil</label>
     <select v-model="selectedPrinterPath" class="form-select" :disabled="isLoading">
       <option value="" disabled>Drucker auswählen...</option>
