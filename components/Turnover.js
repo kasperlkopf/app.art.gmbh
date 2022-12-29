@@ -9,7 +9,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Jahresumsatz</h5>
-          <h6 class="card-subtitle mb-3 text-body-tertiary">{{ formatDate(today, {year: 'numeric'}) }}</h6>
+          <h6 class="card-subtitle mb-2 text-body-tertiary">{{ formatDate(today, {year: 'numeric'}) }}</h6>
           <p class="card-text fs-3 fw-semibold placeholder-wave text-end">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(yearlyTurnover, 2) }} €</span>
@@ -22,7 +22,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Monatsumsatz</h5>
-          <h6 class="card-subtitle mb-3 text-body-tertiary">{{ formatDate(today, {month: 'long'}) }}</h6>
+          <h6 class="card-subtitle mb-2 text-body-tertiary">{{ formatDate(today, {month: 'long'}) }}</h6>
           <p class="card-text fs-3 fw-semibold placeholder-wave text-end">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(monthlyTurnover, 2) }} €</span>
@@ -35,7 +35,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Tagesumsatz</h5>
-          <h6 class="card-subtitle mb-3 text-body-tertiary">{{ formatDate(today) }}</h6>
+          <h6 class="card-subtitle mb-2 text-body-tertiary">{{ formatDate(today) }}</h6>
           <p class="card-text fs-3 fw-semibold placeholder-wave text-end">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(dailyTurnover, 2) }} €</span>
