@@ -56,7 +56,7 @@ export default {
           console.log(err);
         })
         .finally(() => {
-          setTimeout(() => (this.isLoading = false), 2000);
+          this.isLoading = false;
         });
     },
     setLabelPrinterPath() {
