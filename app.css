@@ -21,6 +21,7 @@ body {
 
 .adios-nav-link:not(.active):hover {
   color: var(--bs-emphasis-color)!important;
+  background-color: var(--bs-secondary-bg);
 }
 
 /* input date */
