@@ -1,13 +1,15 @@
 // Warehouse.js
 
 const template = `
-  <div class="col-12 col-md-6">
-    <label class="form-label">Etikettendrucker Kamil</label>
-    <select v-model="selectedPrinterPath" class="form-select" :disabled="isLoading">
-      <option value="" disabled>Drucker auswählen...</option>
-      <option value="\\\\SRVMNG\\04-Etikett-Lager1">04-Etikett-Lager1</option>
-      <option value="\\\\SRVMNG\\05-Etikett-Lager">05-Etikett-Lager</option>
-    </select>
+  <div class="row">
+    <label class="col-sm-2 col-form-label">Etikettendrucker Kamil</label>
+    <div class="col-sm-10">
+      <select v-model="selectedPrinterPath" class="form-select" :disabled="isLoading">
+        <option value="" disabled>Drucker auswählen...</option>
+        <option value="\\\\SRVMNG\\04-Etikett-Lager1">04-Etikett-Lager1</option>
+        <option value="\\\\SRVMNG\\05-Etikett-Lager">05-Etikett-Lager</option>
+      </select>
+    </div>
   </div>
 `;
 
