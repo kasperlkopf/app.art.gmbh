@@ -50,6 +50,8 @@ const app = Vue.createApp({
     toggleTheme() {
       const theme = this.currentTheme === 'dark' ? 'light' : 'dark';
 
+      console.log(this.currentTheme);
+
       // const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
       document.documentElement.setAttribute('data-bs-theme', theme);
