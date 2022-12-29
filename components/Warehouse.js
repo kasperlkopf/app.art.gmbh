@@ -2,8 +2,8 @@
 
 const template = `
   <div class="row">
-    <label class="col-sm-2 col-form-label">Etikettendrucker Kamil</label>
-    <div class="col-sm-10">
+    <label class="col-md-6 col-form-label">Etikettendrucker Kamil</label>
+    <div class="col-md-6">
       <select v-model="selectedPrinterPath" class="form-select" :disabled="isLoading">
         <option value="" disabled>Drucker auswählen...</option>
         <option value="\\\\SRVMNG\\04-Etikett-Lager1">04-Etikett-Lager1</option>
