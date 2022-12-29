@@ -4,16 +4,7 @@ body {
   overflow-y: scroll;
 }
 
-.adios-nav-link {
-  --bs-btn-font-weight: 600;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: var(--bd-violet);
-  --bs-btn-border-color: var(--bd-violet);
-  --bs-btn-border-radius: .5rem;
-  --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-}
+/* nav */
 
 .adios-nav-link:not(.active) {
   color: var(--bs-body-color);
