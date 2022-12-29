@@ -45,3 +45,8 @@ const app = Vue.createApp({
 
 app.use(router);
 app.mount('#app');
+
+// theme
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.documentElement.setAttribute('data-bs-theme', 'dark');
+}
