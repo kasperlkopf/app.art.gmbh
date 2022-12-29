@@ -23,7 +23,7 @@ export default {
       const month = date.getMonth();
 
       return month < 3 ? 'Q1' : month < 6 ? 'Q2' : month < 9 ? 'Q3' : 'Q4';
-    }
+    },
     getISOWeek(d) {
       const date = d ? new Date(d) : new Date();
 
