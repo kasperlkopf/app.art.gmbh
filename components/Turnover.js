@@ -8,7 +8,8 @@ const template = `
     <div class="col">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Jahresumsatz <span class="fw-semibold">{{ formatDate(today, {year: 'numeric'}) }}</span></h5>
+          <h5 class="card-title">Jahresumsatz</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ formatDate(today, {year: 'numeric'}) }}</h6>
           <p class="card-text placeholder-wave">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(yearlyTurnover, 2) }} €</span>
@@ -20,7 +21,8 @@ const template = `
     <div class="col">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Monatsumsatz <span class="fw-semibold">{{ formatDate(today, {month: 'long'}) }}</span></h5>
+          <h5 class="card-title">Monatsumsatz</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ formatDate(today, {month: 'long'}) }}</h6>
           <p class="card-text placeholder-wave">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(monthlyTurnover, 2) }} €</span>
@@ -33,6 +35,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Tagesumsatz</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ formatDate(today) }}</h6>
           <p class="card-text placeholder-wave">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(dailyTurnover, 2) }} €</span>
