@@ -15,6 +15,14 @@ body {
   --bs-btn-active-color: var(--bs-btn-hover-color);
 }
 
+.adios-nav-link:not(.active) {
+  color: var(--bs-body-color);
+}
+
+.adios-nav-link:not(.active):hover {
+  color: var(--bs-emphasis-color)!important;
+}
+
 /* input date */
 
 input[type='date']::-webkit-calendar-picker-indicator,
