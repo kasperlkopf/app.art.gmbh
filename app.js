@@ -41,16 +41,12 @@ const app = Vue.createApp({
   created() {
     console.log('App: created');
   },
-  computed: {
-    currentTheme() {
-      return document.documentElement.getAttribute('data-bs-theme');
-    }
-  },
   methods: {
     toggleTheme() {
-      const theme = this.currentTheme === 'dark' ? 'light' : 'dark';
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+      const theme = currentTheme === 'dark' ? 'light' : 'dark';
 
-      console.log(this.currentTheme);
+      console.log(currentTheme);
 
       // const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
