@@ -10,7 +10,7 @@ const template = `
         <div class="card-body">
           <h5 class="card-title">Jahresumsatz</h5>
           <h6 class="card-subtitle mb-3 text-body-tertiary">{{ formatDate(today, {year: 'numeric'}) }}</h6>
-          <p class="card-text fs-3 placeholder-wave">
+          <p class="card-text fs-3 placeholder-wave text-end">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(yearlyTurnover, 2) }} €</span>
           </p>
