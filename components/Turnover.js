@@ -90,7 +90,7 @@ export default {
           const message = res.data.message[0];
 
           this.yearlyTurnover = message.yearlyTurnover[0].orderSum;
-          this.quarterlyTurnover = message.yearlyTurnover[0].orderSum;
+          this.quarterlyTurnover = message.quarterlyTurnover[0].orderSum;
           this.monthlyTurnover = message.monthlyTurnover[0].orderSum;
           this.dailyTurnover = message.dailyTurnover[0].orderSum;
         })
