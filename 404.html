@@ -28,7 +28,7 @@
         <div class="d-flex">
 
           <!-- sidebar -->
-          <aside id="sidebar" class="me-3 d-flex flex-column text-nowrap user-select-none overflow-auto" style="min-width: 256px;">
+          <aside id="sidebar" class="d-flex flex-column text-nowrap user-select-none overflow-auto pe-3 pt-4" style="min-width: 256px;">
             <nav class="nav flex-column nav-pills">
               <router-link to="warehouse" class="nav-link mb-1" active-class="active">Warehouse</router-link>
               <router-link to="turnover" class="nav-link mb-1" active-class="active">Turnover</router-link>
@@ -37,7 +37,7 @@
           </aside>
 
           <!-- main -->
-          <main id="main" class="w-100">
+          <main id="main" class="w-100 ps-3 py-4">
             <router-view v-slot="{ Component }">
               <component :is="Component" />
             </router-view>
