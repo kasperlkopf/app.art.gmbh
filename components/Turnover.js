@@ -3,7 +3,7 @@
 import SharedMethods from '/components/SharedMethods.js';
 
 const template = `
-  <div class="row row-cols-1 row-cols-md-2 g-3">
+  <div class="row g-3">
 
     <div class="col-12 col-md-6">
       <div class="card">
@@ -22,7 +22,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Wochenumsatz</h5>
-          <h6 class="card-subtitle mb-2 text-body-tertiary">KW{{ getISOWeek() }}</h6>
+          <h6 class="card-subtitle mb-2 text-body-tertiary">KW {{ getISOWeek() }}</h6>
           <p class="card-text fs-4 fw-semibold placeholder-wave text-end">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(weeklyTurnover, 2) }} €</span>
