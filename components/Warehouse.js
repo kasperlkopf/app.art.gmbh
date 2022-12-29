@@ -3,6 +3,7 @@
 const template = `
   <div class="card">
     <div class="card-body">
+      <h5 class="card-title">Drucker</h5>
       <div class="row">
         <label class="col-md-6 col-form-label">Etikettendrucker Kamil</label>
         <div class="col-md-6">
