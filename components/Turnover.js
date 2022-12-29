@@ -7,7 +7,7 @@ const template = `
 
     <div class="col">
       <div class="card">
-        <div class="card-body">
+        <div class="card-body border-success">
           <h5 class="card-title">Jahresumsatz</h5>
           <h6 class="card-subtitle mb-2 text-body-tertiary">{{ formatDate(today, {year: 'numeric'}) }}</h6>
           <p class="card-text fs-4 fw-semibold placeholder-wave text-end">
