@@ -9,7 +9,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Jahresumsatz</h5>
-          <p class="card-text placeholder-glow">
+          <p class="card-text placeholder-wave">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(yearlyTurnover, 2) }} €</span>
           </p>
@@ -21,7 +21,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Monatsumsatz</h5>
-          <p class="card-text placeholder-glow">
+          <p class="card-text placeholder-wave">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(monthlyTurnover, 2) }} €</span>
           </p>
@@ -33,7 +33,7 @@ const template = `
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Tagesumsatz</h5>
-          <p class="card-text placeholder-glow">
+          <p class="card-text placeholder-wave">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(dailyTurnover, 2) }} €</span>
           </p>
