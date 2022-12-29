@@ -1,7 +1,5 @@
 // app.js
 
-import Sidebar from '/components/Sidebar.js';
-
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
   routes: [
@@ -30,9 +28,6 @@ router.beforeEach((to, from) => {
 
 const app = Vue.createApp({
   name: 'App',
-  components: {
-    Sidebar,
-  },
   data() {
     return {
       //
