@@ -12,12 +12,17 @@ export default {
 
       return num.toLocaleString('de-DE', {minimumFractionDigits: d, maximumFractionDigits: d})
     },
-    formatDate(d, opts) {
+    formatDate(opts, d = new Date()) {
       const options = opts || { year: 'numeric', month: '2-digit', day: '2-digit' };
 
-      return d ? new Date(d).toLocaleDateString('de-DE', options) : '';
+      return new Date(d).toLocaleDateString('de-DE', options);
     },
-    getISOWeek(d) {
+    getQuarter(d = new Date()) {
+      const month = new Date(d).getMonth();
+
+      return month < 3 ? 'Q1' : month < 6 ? 'Q2' : month < 9 ? 'Q3' : 'Q4';
+    }
+    getISOWeek(d = new Date()) {
       const date = new Date(d);
 
       date.setHours(0, 0, 0);
