@@ -11,7 +11,7 @@ body {
 }
 
 .adios-nav-link:not(.active):hover {
-  color: var(--bs-emphasis-color)!important;
+  color: var(--bs-emphasis-color);
   background-color: var(--bs-secondary-bg);
 }
 
@@ -22,8 +22,8 @@ body {
 
 /* input date */
 
-input[type='date']::-webkit-calendar-picker-indicator,
-input[type='week']::-webkit-calendar-picker-indicator {
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="week"]::-webkit-calendar-picker-indicator {
   position: absolute;
   top: 0;
   left: 0;

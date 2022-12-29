@@ -8,7 +8,7 @@ const template = `
     <div class="col">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Jahresumsatz</h5>
+          <h5 class="card-title">Jahresumsatz <span class="fw-semibold">{{ formatDate(today, {year: 'numeric'}) }}</span></h5>
           <p class="card-text placeholder-wave">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(yearlyTurnover, 2) }} €</span>
@@ -20,7 +20,7 @@ const template = `
     <div class="col">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Monatsumsatz</h5>
+          <h5 class="card-title">Monatsumsatz <span class="fw-semibold">{{ formatDate(today, {month: 'long'}) }}</span></h5>
           <p class="card-text placeholder-wave">
             <span v-if="isLoading" class="placeholder rounded opacity-25" style="width: 120px;"></span>
             <span v-else>{{ formatNumbersLocal(monthlyTurnover, 2) }} €</span>
@@ -50,6 +50,7 @@ export default {
   data() {
     return {
       isLoading: false,
+      today: new Date(),
       yearlyTurnover: 0,
       monthlyTurnover: 0,
       dailyTurnover: 0,
