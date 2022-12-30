@@ -49,7 +49,7 @@ export default {
     this.setTheme();
   },
   methods: {
-    setTheme(theme) {
+    setTheme(t) {
       const theme = t ? t : this.getPreferredTheme();
 
       this.selectedTheme = theme;
