@@ -1,7 +1,6 @@
 // Store.js
 
-import { createStore } from 'vuex';
-import axios from 'axios';
+import { createStore } from 'https://unpkg.com/vuex@4/dist/vuex.esm-browser.js';
 
 const Store = createStore({
   state() {
@@ -62,14 +61,14 @@ const Store = createStore({
       state.openDocuments.hasError = false;
       state.openDocuments.isLoading = true;
 
-      axios
-        .get('https://api.art.gmbh/app/open-documents?' + Date.now())
-        .then((res) => {
+      fetch('https://api.art.gmbh/app/open-documents?' + Date.now())
+        .then((res) => res.json())
+        .then((data) => {
           console.log(res);
 
-          const data = res.data.message;
+          const message = data.message;
 
-          dispatch('marryOpenDocuments', data).then((res) => {
+          dispatch('marryOpenDocuments', message).then((res) => {
             commit('updateOpenDocuments', res);
 
             state.openDocuments.isLoading = false;
@@ -219,10 +218,16 @@ const Store = createStore({
         commit('updateOpenPurchaseOrder', payload);
       }
 
-      axios
-        .post('https://api.art.gmbh/app/open-documents', payload)
-        .then((res) => {
-          console.log(res);
+      fetch('https://api.art.gmbh/app/open-documents', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
         })
         .catch((err) => {
           console.log(err);
