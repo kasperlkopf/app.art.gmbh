@@ -26,7 +26,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  console.log(isAuthenticated);
+  console.log(this.$parent);
 
   if (!isAuthenticated) {
     return false;
@@ -44,6 +44,9 @@ const app = createApp({
     console.log('App: created');
 
     this.toggleTheme();
+  },
+  mounted() {
+
   },
   methods: {
     toggleTheme() {
