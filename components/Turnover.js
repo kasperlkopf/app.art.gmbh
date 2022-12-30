@@ -1,6 +1,5 @@
 // Turnover.js
 
-import axios from 'axios';
 import SharedMethods from '/components/SharedMethods.js';
 
 const template = `
