@@ -4,7 +4,18 @@ body {
   overflow-y: scroll;
 }
 
-/* nav */
+/* header */
+
+header.navbar::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  content: "";
+  background-image: linear-gradient(to bottom, rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
+}
+
+/* sidebar */
 
 .adios-nav-link:not(.active) {
   color: var(--bs-body-color);
