@@ -69,22 +69,15 @@
         <div class="d-flex">
 
           <!-- sidebar -->
-          <aside id="sidebar" class="d-flex flex-column text-nowrap user-select-none overflow-auto pe-3 py-3 position-sticky top-0" style="min-width: 256px;">
+          <aside class="d-flex flex-column text-nowrap user-select-none overflow-auto pe-3 py-3 position-sticky top-0" style="min-width: 256px;">
             <nav class="nav flex-column nav-pills mb-auto">
               <router-link to="warehouse" class="nav-link adios-nav-link mb-1" active-class="active">Lager</router-link>
               <router-link to="turnover" class="nav-link adios-nav-link mb-1" active-class="active">Umsätze</router-link>
             </nav>
-            <footer>
-              <button class="btn btn-link" @click="toggleTheme">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half mb-1" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                </svg>
-              </button>
-            </footer>
           </aside>
 
           <!-- main -->
-          <main id="main" class="w-100 ps-3 py-3">
+          <main class="w-100 ps-3 py-3">
             <router-view v-slot="{ Component }">
               <component :is="Component" />
             </router-view>
@@ -92,8 +85,7 @@
 
         </div>
       </div>
-    </div>
 
-    <script src="js/theme.js"></script>
+    </div>
   </body>
 </html>
