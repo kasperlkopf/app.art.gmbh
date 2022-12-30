@@ -45,7 +45,7 @@ const app = createApp({
   name: 'App',
   data() {
     return {
-      isAuthenticated: false,
+      //
     };
   },
   created() {
@@ -67,5 +67,3 @@ const app = createApp({
 
 app.use(router);
 app.mount('#app');
-
-router.app = app
