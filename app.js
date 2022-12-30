@@ -1,5 +1,7 @@
 // app.js
 
+import ThemeSelect from '/components/ThemeSelect.js';
+
 const { createRouter, createWebHistory } = VueRouter;
 const { createApp } = Vue;
 
@@ -31,6 +33,9 @@ router.beforeEach((to, from) => {
 
 const app = createApp({
   name: 'App',
+  components: {
+    ThemeSelect,
+  },
   data() {
     return {
       //
@@ -38,6 +43,8 @@ const app = createApp({
   },
   created() {
     console.log('App: created');
+
+    this.setTheme();
   },
 });
 
