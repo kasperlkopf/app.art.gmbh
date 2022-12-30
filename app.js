@@ -52,9 +52,13 @@ const app = createApp({
     <Header />
 
     <div class="container-xxl mt-3">
-      <div class="d-flex">
-        <Sidebar />
-        <Main />
+      <div class="row">
+        <div class="col" style="flex: 0 0 256px;">
+          <Sidebar />
+        </div>
+        <div class="col">
+          <Main />
+        </div>
       </div>
     </div>
   `,
