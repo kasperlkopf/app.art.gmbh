@@ -26,14 +26,18 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  console.log(router.app);
-  console.log(router.app.isAuthenticated);
-  console.log(router.app.$data);
+  const isAuthenticated = localStorage.getItem('isAuthenticated');
 
-  const auth = prompt('Passwort');
+  console.log('is authenticated: ' + isAuthenticated);
 
-  if (btoa(auth) !== 'a29tYmlzY2hyYXViZW4=') {
-    return false;
+  if (!isAuthenticated) {
+    const auth = prompt('Passwort');
+
+    if (btoa(auth) === 'a29tYmlzY2hyYXViZW4=') {
+      localStorage.setItem('isAuthenticated', true)
+    } else {
+      return false;
+    }
   }
 });
 
