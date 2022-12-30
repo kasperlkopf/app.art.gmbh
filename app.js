@@ -49,16 +49,29 @@ const app = createApp({
     }
     */
 
-    this.toggleTheme();
+    this.setTheme();
   },
   methods: {
+    setTheme(t) {
+      const theme = t ? t : this.getPreferredTheme();
+
+      localStorage.setItem('theme', theme);
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    },
+    getPreferredTheme() {
+      const storedTheme = localStorage.getItem('theme');
+
+      if (storedTheme) {
+        return storedTheme;
+      }
+
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    },
     toggleTheme() {
       const currentTheme = document.documentElement.getAttribute('data-bs-theme');
-      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const theme = currentTheme ? currentTheme === 'dark' ? 'light' : 'dark' : this.getPreferredTheme();
 
-      const theme = currentTheme ? currentTheme === 'dark' ? 'light' : 'dark' : preferredTheme;
-
-      document.documentElement.setAttribute('data-bs-theme', theme);
+      this.setTheme(theme);
     }
   },
 });
