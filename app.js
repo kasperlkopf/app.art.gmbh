@@ -43,8 +43,6 @@ const app = createApp({
   },
   created() {
     console.log('App: created');
-
-    this.setTheme();
   },
 });
 
