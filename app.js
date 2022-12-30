@@ -31,9 +31,7 @@ router.beforeEach((to, from) => {
   if (!isAuthenticated) {
     const auth = promt('Passwort');
 
-    if (btoa(auth) === 'a29tYmlzY2hyYXViZW4=') {
-      next();
-    } else {
+    if (btoa(auth) !== 'a29tYmlzY2hyYXViZW4=') {
       return false;
     }
   }
