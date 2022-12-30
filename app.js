@@ -26,14 +26,12 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  console.log(app.$data);
+  console.log(router.app);
 
-  if (!isAuthenticated) {
-    const auth = promt('Passwort');
+  const auth = prompt('Passwort');
 
-    if (btoa(auth) !== 'a29tYmlzY2hyYXViZW4=') {
-      return false;
-    }
+  if (btoa(auth) !== 'a29tYmlzY2hyYXViZW4=') {
+    return false;
   }
 });
 
