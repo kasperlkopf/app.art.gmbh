@@ -1,5 +1,6 @@
 // Turnover.js
 
+import axios from 'axios';
 import SharedMethods from '/components/SharedMethods.js';
 
 const template = `
@@ -95,7 +96,7 @@ export default {
     getTurnover() {
       this.isLoading = true;
 
-      window.axios
+      axios
         .get('https://api.art.gmbh/myfactory/getTurnover?ts=' + Date.now())
         .then((res) => {
           console.log(res);

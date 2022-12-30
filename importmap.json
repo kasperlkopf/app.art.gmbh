@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "vue": "https://unpkg.com/vue@next",
+    "vue-router": "https://unpkg.com/vue-router@4",
+    "vuex": "https://unpkg.com/vuex@4",
+    "axios": "https://unpkg.com/axios@1.0.0/dist/axios.min.js"
+  }
+}

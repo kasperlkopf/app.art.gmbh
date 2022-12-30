@@ -1,6 +1,9 @@
 // Store.js
 
-const Store = Vuex.createStore({
+import { createStore } from 'vuex';
+import axios from 'axios';
+
+const Store = createStore({
   state() {
     return {
       openDocuments: {
@@ -59,7 +62,7 @@ const Store = Vuex.createStore({
       state.openDocuments.hasError = false;
       state.openDocuments.isLoading = true;
 
-      window.axios
+      axios
         .get('https://api.art.gmbh/app/open-documents?' + Date.now())
         .then((res) => {
           console.log(res);
@@ -216,7 +219,7 @@ const Store = Vuex.createStore({
         commit('updateOpenPurchaseOrder', payload);
       }
 
-      window.axios
+      axios
         .post('https://api.art.gmbh/app/open-documents', payload)
         .then((res) => {
           console.log(res);

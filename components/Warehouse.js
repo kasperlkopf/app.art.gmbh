@@ -1,5 +1,7 @@
 // Warehouse.js
 
+import axios from 'axios';
+
 const template = `
   <div class="card">
     <div class="card-body">
@@ -45,7 +47,7 @@ export default {
     getLabelPrinterPath() {
       this.isLoading = true;
 
-      window.axios
+      axios
         .get('https://api.art.gmbh/myfactory/getLabelPrinterPath?ts=' + Date.now())
         .then((res) => {
           console.log(res);
@@ -64,7 +66,7 @@ export default {
 
       const printerPath = this.selectedPrinterPath;
 
-      window.axios
+      axios
         .post('https://api.art.gmbh/myfactory/setLabelPrinterPath', { printerPath })
         .then((res) => {
           console.log(res);
