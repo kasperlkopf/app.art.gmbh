@@ -9,23 +9,23 @@ const template = `
       <i v-else class="bi bi-circle-half"></i>
       <span class="d-none ms-2">Toggle theme</span>
     </button>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">
+    <ul class="dropdown-menu dropdown-menu-end p-1">
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" @click="setTheme('light')">
+        <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" @click="setTheme('light')">
           <i class="bi bi-sun-fill me-2 opacity-50"></i>
           Light
           <i v-if="selectedTheme === 'light'" class="bi bi-check2 ms-auto"></i>
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" @click="setTheme('dark')">
+        <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" @click="setTheme('dark')">
           <i class="bi bi-moon-stars-fill me-2 opacity-50"></i>
           Dark
           <i v-if="selectedTheme === 'dark'" class="bi bi-check2 ms-auto"></i>
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" @click="setTheme('auto')">
+        <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="setTheme('auto')">
           <i class="bi bi-circle-half me-2 opacity-50"></i>
           Auto
           <i v-if="selectedTheme === 'auto'" class="bi bi-check2 ms-auto"></i>
