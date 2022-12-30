@@ -26,19 +26,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  const isAuthenticated = localStorage.getItem('isAuthenticated');
-
-  console.log('is authenticated: ' + isAuthenticated);
-
-  if (!isAuthenticated) {
-    const auth = prompt('Passwort');
-
-    if (btoa(auth) === 'a29tYmlzY2hyYXViZW4=') {
-      localStorage.setItem('isAuthenticated', true)
-    } else {
-      return false;
-    }
-  }
+  //
 });
 
 const app = createApp({
@@ -50,6 +38,18 @@ const app = createApp({
   },
   created() {
     console.log('App: created');
+
+    const auth = localStorage.getItem('auth');
+
+    if (!auth) {
+      const pw = prompt('Passwort');
+
+      if (btoa(pw) === 'a29tYmlzY2hyYXViZW4=') {
+        localStorage.setItem('isAuthenticated', true)
+      } else {
+        document.body.innerHTML = '';
+      }
+    }
 
     this.toggleTheme();
   },
