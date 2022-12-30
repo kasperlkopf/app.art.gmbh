@@ -50,7 +50,7 @@ export default {
         .then((data) => {
           console.log(data);
 
-          this.selectedPrinterPath = data.data.message[0].PrinterPath;
+          this.selectedPrinterPath = data.message[0].PrinterPath;
         })
         .catch((err) => {
           console.log(err);

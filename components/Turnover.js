@@ -100,7 +100,7 @@ export default {
         .then((data) => {
           console.log(data);
 
-          const message = data.data.message[0];
+          const message = data.message[0];
 
           this.dailyTurnover = message.dailyTurnover[0].orderSum;
           this.weeklyTurnover = message.weeklyTurnover[0].orderSum;
