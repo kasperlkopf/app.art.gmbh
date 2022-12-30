@@ -3,7 +3,7 @@
 import ThemeSelect from '/components/ThemeSelect.js';
 
 const template = `
-  <header class="navbar navbar-expand-lg sticky-top border-bottom bg-body top-0">
+  <header class="navbar navbar-expand-lg sticky-top border-bottom bg-body bg-opacity-75 top-0">
     <nav class="container-xxl">
       <a class="navbar-brand p-0" href="#"> 
         <svg class="art-logo my-1" style="height: 32px;" viewBox="0 0 333 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
