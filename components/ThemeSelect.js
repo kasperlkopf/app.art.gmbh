@@ -3,7 +3,7 @@
 const template = `
   <div class="dropdown">
 
-    <button class="btn btn-link text-body dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+    <button class="btn btn-link text-body dropdown-toggle px-2" type="button" data-bs-toggle="dropdown" data-bs-display="static">
       <i v-if="selectedTheme === 'light'" class="bi bi-sun-fill me-1"></i>
       <i v-else-if="selectedTheme === 'dark'" class="bi bi-moon-stars-fill me-1"></i>
       <i v-else class="bi bi-circle-half me-1"></i>
