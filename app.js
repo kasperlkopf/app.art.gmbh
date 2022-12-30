@@ -33,9 +33,6 @@ router.beforeEach((to, from) => {
 
 const app = createApp({
   name: 'App',
-  components: {
-    ThemeSelect,
-  },
   data() {
     return {
       //
@@ -45,6 +42,8 @@ const app = createApp({
     console.log('App: created');
   },
 });
+
+app.component('ThemeSelect', ThemeSelect);
 
 app.use(router);
 app.mount('#app');
