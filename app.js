@@ -1,10 +1,7 @@
 // app.js
 
-import { createRouter, createWebHistory } from 'https://unpkg.com/vue-router@4/dist/vue-router.esm-browser.js';
-import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
-
-const router = createRouter({
-  history: createWebHistory(),
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHistory(),
   routes: [
     {
       path: '/',
@@ -29,7 +26,7 @@ router.beforeEach((to, from) => {
   // document.title = to.meta.title;
 });
 
-const app = createApp({
+const app = Vue.createApp({
   name: 'App',
   data() {
     return {
