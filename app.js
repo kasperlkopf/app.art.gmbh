@@ -35,6 +35,7 @@ const app = createApp({
   created() {
     console.log('App: created');
 
+    /*
     const auth = localStorage.getItem('auth');
 
     if (!auth) {
@@ -46,6 +47,7 @@ const app = createApp({
         document.body.innerHTML = '';
       }
     }
+    */
 
     this.toggleTheme();
   },
