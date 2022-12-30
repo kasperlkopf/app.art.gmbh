@@ -96,8 +96,7 @@ export default {
     getTurnover() {
       this.isLoading = true;
 
-      axios
-        .get('https://api.art.gmbh/myfactory/getTurnover?ts=' + Date.now())
+      fetch('https://api.art.gmbh/myfactory/getTurnover?ts=' + Date.now())
         .then((res) => {
           console.log(res);
 
