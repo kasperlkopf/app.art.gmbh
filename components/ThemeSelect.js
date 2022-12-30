@@ -7,26 +7,26 @@ const template = `
       <i v-if="selectedTheme === 'light'" class="bi bi-sun-fill"></i>
       <i v-else-if="selectedTheme === 'dark'" class="bi bi-moon-stars-fill"></i>
       <i v-else class="bi bi-circle-half"></i>
-      <span class="d-lg-none ms-2">Toggle theme</span>
+      <span class="d-none ms-2">Toggle theme</span>
     </button>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">
       <li>
         <button type="button" class="dropdown-item d-flex align-items-center" @click="setTheme('light')">
-          <i class="bi bi-sun-fill"></i>
+          <i class="bi bi-sun-fill me-2 opacity-50"></i>
           Light
           <i v-if="selectedTheme === 'light'" class="bi bi-check2 ms-auto"></i>
         </button>
       </li>
       <li>
         <button type="button" class="dropdown-item d-flex align-items-center" @click="setTheme('dark')">
-          <i class="bi bi-moon-stars-fill"></i>
+          <i class="bi bi-moon-stars-fill me-2 opacity-50"></i>
           Dark
           <i v-if="selectedTheme === 'dark'" class="bi bi-check2 ms-auto"></i>
         </button>
       </li>
       <li>
         <button type="button" class="dropdown-item d-flex align-items-center" @click="setTheme('auto')">
-          <i class="bi bi-circle-half"></i>
+          <i class="bi bi-circle-half me-2 opacity-50"></i>
           Auto
           <i v-if="selectedTheme === 'auto'" class="bi bi-check2 ms-auto"></i>
         </button>
@@ -46,10 +46,12 @@ export default {
   created() {
     console.log('ThemeSelect: created');
 
-    this.setTheme(this.getPreferredTheme());
+    this.setTheme();
   },
   methods: {
     setTheme(theme) {
+      const theme = t ? t : this.getPreferredTheme();
+
       this.selectedTheme = theme;
 
       if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
