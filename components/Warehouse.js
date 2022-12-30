@@ -1,7 +1,5 @@
 // Warehouse.js
 
-import axios from 'axios';
-
 const template = `
   <div class="card">
     <div class="card-body">
@@ -47,12 +45,12 @@ export default {
     getLabelPrinterPath() {
       this.isLoading = true;
 
-      axios
-        .get('https://api.art.gmbh/myfactory/getLabelPrinterPath?ts=' + Date.now())
-        .then((res) => {
-          console.log(res);
+      fetch('https://api.art.gmbh/myfactory/getLabelPrinterPath?ts=' + Date.now())
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
 
-          this.selectedPrinterPath = res.data.message[0].PrinterPath;
+          this.selectedPrinterPath = data.data.message[0].PrinterPath;
         })
         .catch((err) => {
           console.log(err);
@@ -64,12 +62,20 @@ export default {
     setLabelPrinterPath() {
       this.isLoading = true;
 
-      const printerPath = this.selectedPrinterPath;
+      const payload = {
+        printerPath: this.selectedPrinterPath,
+      };
 
-      axios
-        .post('https://api.art.gmbh/myfactory/setLabelPrinterPath', { printerPath })
-        .then((res) => {
-          console.log(res);
+      fetch('https://api.art.gmbh/myfactory/setLabelPrinterPath', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
         })
         .catch((err) => {
           console.log(err);

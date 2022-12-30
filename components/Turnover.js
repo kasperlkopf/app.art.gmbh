@@ -96,10 +96,11 @@ export default {
       this.isLoading = true;
 
       fetch('https://api.art.gmbh/myfactory/getTurnover?ts=' + Date.now())
-        .then((res) => {
-          console.log(res);
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
 
-          const message = res.data.message[0];
+          const message = data.data.message[0];
 
           this.dailyTurnover = message.dailyTurnover[0].orderSum;
           this.weeklyTurnover = message.weeklyTurnover[0].orderSum;
