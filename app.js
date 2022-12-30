@@ -27,6 +27,8 @@ const router = createRouter({
 
 router.beforeEach((to, from) => {
   console.log(router.app);
+  console.log(router.app.isAuthenticated);
+  console.log(router.app.$data);
 
   const auth = prompt('Passwort');
 
@@ -39,7 +41,7 @@ const app = createApp({
   name: 'App',
   data() {
     return {
-      //
+      isAuthenticated: false,
     };
   },
   created() {
