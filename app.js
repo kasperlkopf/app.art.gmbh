@@ -1,6 +1,8 @@
 // app.js
 
-import ThemeSelect from '/components/ThemeSelect.js';
+import Header from '/components/Header.js';
+import Sidebar from '/components/Sidebar.js';
+import Main from '/components/Main.js';
 
 const { createRouter, createWebHistory } = VueRouter;
 const { createApp } = Vue;
@@ -33,6 +35,11 @@ router.beforeEach((to, from) => {
 
 const app = createApp({
   name: 'App',
+  components: {
+    Header,
+    Sidebar,
+    Main,
+  },
   data() {
     return {
       //
@@ -41,9 +48,17 @@ const app = createApp({
   created() {
     console.log('App: created');
   },
-});
+  template: `
+    <Header />
 
-app.component('ThemeSelect', ThemeSelect);
+    <div class="container-xxl">
+      <div class="d-flex">
+        <Sidebar />
+        <Main />
+      </div>
+    </div>
+  `,
+});
 
 app.use(router);
 app.mount('#app');
