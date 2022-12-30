@@ -1,9 +1,7 @@
 // Index.js
 
 const template = `
-  <div>
-    ...
-  </div>
+  ...
 `;
 
 export default {
@@ -15,6 +13,8 @@ export default {
   },
   created() {
     console.log('Index: created');
+
+    document.body.innerHTML = '';
   },
   template,
 };
