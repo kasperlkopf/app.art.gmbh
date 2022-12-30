@@ -1,7 +1,7 @@
 // app.js
 
-import { createRouter, createWebHistory } from 'vue-router';
-import { createApp } from 'vue';
+const { createRouter, createWebHistory } = VueRouter;
+const { createApp } = Vue;
 
 const router = createRouter({
   history: createWebHistory(),
@@ -26,7 +26,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  // document.title = to.meta.title;
+  console.log(to);
 });
 
 const app = createApp({
