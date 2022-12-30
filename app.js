@@ -51,7 +51,7 @@ const app = createApp({
   template: `
     <Header />
 
-    <div class="container-xxl">
+    <div class="container-xxl mt-3">
       <div class="d-flex">
         <Sidebar />
         <Main />
