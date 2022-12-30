@@ -3,10 +3,10 @@
 const template = `
   <div class="dropdown">
 
-    <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" data-bs-display="static">
-      <i v-if="selectedTheme === 'light'" class="bi bi-sun-fill"></i>
-      <i v-else-if="selectedTheme === 'dark'" class="bi bi-moon-stars-fill"></i>
-      <i v-else class="bi bi-circle-half"></i>
+    <button class="btn btn-link text-body dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+      <i v-if="selectedTheme === 'light'" class="bi bi-sun-fill me-1"></i>
+      <i v-else-if="selectedTheme === 'dark'" class="bi bi-moon-stars-fill me-1"></i>
+      <i v-else class="bi bi-circle-half me-1"></i>
       <span class="d-none ms-2">Toggle theme</span>
     </button>
     <ul class="dropdown-menu dropdown-menu-end p-1">
