@@ -62,5 +62,6 @@ const app = createApp({
 });
 
 app.use(router);
-router.app = app
 app.mount('#app');
+
+router.app = app
