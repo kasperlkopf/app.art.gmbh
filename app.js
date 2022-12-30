@@ -47,8 +47,6 @@ const app = createApp({
   },
   mounted() {
     const auth = prompt('Passwort');
-
-    if (auth ===)
   },
   methods: {
     toggleTheme() {
