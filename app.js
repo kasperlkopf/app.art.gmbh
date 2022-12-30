@@ -26,8 +26,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  console.log(app);
-  console.log(this.app);
+  console.log(app.$data);
 
   if (!isAuthenticated) {
     return false;
