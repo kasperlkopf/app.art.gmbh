@@ -1,10 +1,7 @@
 // app.js
 
-// onst { createRouter, createWebHistory } = VueRouter;
-// const { createApp } = Vue;
-
-import { createRouter, createWebHistory } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js';
-import { createApp } from 'https://unpkg.com/vue-router@4/dist/vue-router.esm-browser.js';
+import { createRouter, createWebHistory } from 'https://unpkg.com/vue-router@4/dist/vue-router.esm-browser.js';
+import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
 const router = createRouter({
   history: createWebHistory(),
