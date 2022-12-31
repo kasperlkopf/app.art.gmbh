@@ -3,22 +3,22 @@
 const template = `
   <div class="dropdown">
 
-    <button class="btn btn-link text-body dropdown-toggle px-2" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+    <a class="nav-link dropdown-toggle px-2" href="#" data-bs-toggle="dropdown" data-bs-display="static">
       <i v-if="selectedTheme === 'light'" class="bi bi-sun-fill me-1"></i>
       <i v-else-if="selectedTheme === 'dark'" class="bi bi-moon-stars-fill me-1"></i>
       <i v-else class="bi bi-circle-half me-1"></i>
       <span class="d-none ms-2">Toggle theme</span>
-    </button>
+    </a>
     <ul class="dropdown-menu dropdown-menu-end p-1">
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" @click="setTheme('light')">
+        <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="setTheme('light')">
           <i class="bi bi-sun-fill me-2 opacity-50"></i>
           Light
           <i v-if="selectedTheme === 'light'" class="bi bi-check2 ms-auto"></i>
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" @click="setTheme('dark')">
+        <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="setTheme('dark')">
           <i class="bi bi-moon-stars-fill me-2 opacity-50"></i>
           Dark
           <i v-if="selectedTheme === 'dark'" class="bi bi-check2 ms-auto"></i>

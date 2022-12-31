@@ -44,17 +44,17 @@ const template = `
       <div class="navbar-nav">
         <!-- slack -->
         <div class="nav-item dropdown me-2">
-          <button class="btn btn-link text-body dropdown-toggle px-2" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+          <a class="nav-link dropdown-toggle px-2" href="#" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-slack me-1"></i>
             <span class="d-none ms-2">Toggle theme</span>
-          </button>
+          </a>
           <ul class="dropdown-menu dropdown-menu-end p-1">
             <li><h6 class="dropdown-header">Öffne Slack...</h6></li>
             <li>
-              <a class="dropdown-item" href="slack://channel?team=T69NHRRFB&id=C69K0LZAL">#art</a>
+              <a class="dropdown-item rounded" href="slack://channel?team=T69NHRRFB&id=C69K0LZAL">#art</a>
             </li>
             <li>
-              <a class="dropdown-item" href="slack://user?team=T69NHRRFB&id=U6HM3CR6C">@manuel</a>
+              <a class="dropdown-item rounded" href="slack://user?team=T69NHRRFB&id=U6HM3CR6C">@manuel</a>
             </li>
           </ul>
         </div>
