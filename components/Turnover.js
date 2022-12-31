@@ -86,6 +86,11 @@ export default {
       yearlyTurnover: 0,
     };
   },
+  computed: {
+    pizzaCount() {
+      return Math.floor(this.yearlyTurnover / 1000000);
+    }
+  },
   created() {
     console.log('Turnover: created');
 
