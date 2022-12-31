@@ -3,7 +3,7 @@
 import ThemeSelect from '/components/ThemeSelect.js';
 
 const template = `
-  <header class="navbar navbar-expand-lg sticky-top border-bottom bg-body top-0">
+  <header class="navbar navbar-expand-lg sticky-top border-bottom bg-body top-0 bg-opacity-75" style="backdrop-filter: blur(12px);">
     <nav class="container-xxl">
 
       <a class="navbar-brand py-2" href="#"> 
