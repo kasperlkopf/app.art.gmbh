@@ -40,7 +40,7 @@ export default {
   name: 'ThemeSelect',
   data() {
     return {
-      selectedTheme: 'auto',
+      selectedTheme: '',
     };
   },
   created() {
