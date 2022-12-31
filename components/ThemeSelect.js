@@ -37,14 +37,14 @@ const template = `
 `;
 
 export default {
-  name: "ThemeSelect",
+  name: 'ThemeSelect',
   data() {
     return {
-      selectedTheme: "auto",
+      selectedTheme: 'auto',
     };
   },
   created() {
-    console.log("ThemeSelect: created");
+    console.log('ThemeSelect: created');
 
     this.setTheme();
   },
@@ -54,27 +54,22 @@ export default {
 
       this.selectedTheme = theme;
 
-      if (
-        theme === "auto" &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        document.documentElement.setAttribute("data-bs-theme", "dark");
+      if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
       } else {
-        document.documentElement.setAttribute("data-bs-theme", theme);
+        document.documentElement.setAttribute('data-bs-theme', theme);
       }
 
-      localStorage.setItem("theme", theme);
+      localStorage.setItem('theme', theme);
     },
     getPreferredTheme() {
-      const storedTheme = localStorage.getItem("theme");
+      const storedTheme = localStorage.getItem('theme');
 
       if (storedTheme) {
         return storedTheme;
       }
 
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     },
   },
   template,

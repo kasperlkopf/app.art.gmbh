@@ -1,16 +1,13 @@
 {
-  "auto_format_on_save": true,
-  "prettier_options": {
-    "printWidth": 20000,
-    "trailingComma": "es5",
-    "proseWrap": "never",
-    "overrides": [
-      {
-        "files": "*.js",
-        "options": {
-          "singleQuote": true
-        }
+  "printWidth": 20000,
+  "trailingComma": "es5",
+  "proseWrap": "never",
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "singleQuote": true
       }
-    ]
-  }
+    }
+  ]
 }
