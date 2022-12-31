@@ -10,15 +10,14 @@ const template = `
 `;
 
 export default {
-  name: "Sidebar",
-
+  name: 'Sidebar',
   data() {
     return {
       //
     };
   },
   created() {
-    console.log("Sidebar: created");
+    console.log('Sidebar: created');
   },
   template,
 };

@@ -6,8 +6,8 @@ body {
 
 /* logo */
 
-[data-bs-theme="dark"] .art-logo g,
-[data-bs-theme="dark"] .art-logo path {
+[data-bs-theme='dark'] .art-logo g,
+[data-bs-theme='dark'] .art-logo path {
   fill: #ffffff !important;
 }
 
@@ -22,15 +22,15 @@ body {
   background-color: var(--bs-secondary-bg);
 }
 
-[data-bs-theme="dark"] .adios-nav-link.active {
+[data-bs-theme='dark'] .adios-nav-link.active {
   background-color: var(--bs-light) !important;
   color: var(--bs-dark) !important;
 }
 
 /* input date */
 
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="week"]::-webkit-calendar-picker-indicator {
+input[type='date']::-webkit-calendar-picker-indicator,
+input[type='week']::-webkit-calendar-picker-indicator {
   position: absolute;
   top: 0;
   left: 0;

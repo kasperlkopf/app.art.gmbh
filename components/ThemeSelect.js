@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       selectedTheme: '',
-    }
+    };
   },
   created() {
     console.log('ThemeSelect: created');
@@ -55,9 +55,9 @@ export default {
       this.selectedTheme = theme;
 
       if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('data-bs-theme', 'dark')
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
       } else {
-        document.documentElement.setAttribute('data-bs-theme', theme)
+        document.documentElement.setAttribute('data-bs-theme', theme);
       }
 
       localStorage.setItem('theme', theme);
@@ -69,7 +69,7 @@ export default {
         return storedTheme;
       }
 
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     },
   },
   template,

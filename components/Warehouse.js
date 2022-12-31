@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       isLoading: false,
-      selectedPrinterPath: ''
+      selectedPrinterPath: '',
     };
   },
   created() {
@@ -39,7 +39,7 @@ export default {
       if (oldVal !== '' && newVal !== '') {
         this.setLabelPrinterPath();
       }
-    }
+    },
   },
   methods: {
     getLabelPrinterPath() {
@@ -83,7 +83,7 @@ export default {
         .finally(() => {
           this.isLoading = false;
         });
-    }
+    },
   },
   template,
 };
