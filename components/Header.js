@@ -4,7 +4,7 @@ import ThemeSelect from '/components/ThemeSelect.js';
 
 const template = `
   <header class="navbar navbar-expand-lg sticky-top border-bottom bg-body top-0 bg-opacity-75" style="backdrop-filter: blur(12px);">
-    <nav class="container-xxl flex-wrap flex-lg-nowrap">
+    <nav class="container flex-wrap flex-lg-nowrap">
 
       <button class="navbar-toggler p-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
         <i class="bi bi-list"></i>

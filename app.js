@@ -51,12 +51,12 @@ const app = createApp({
   template: `
     <Header />
 
-    <div class="container-xxl mt-3">
+    <div class="container mt-3">
       <div class="row">
-        <div class="col col-md-3 col-lg-2 d-md-block">
+        <div class="col-md-3 col-lg-2">
           <Sidebar />
         </div>
-        <div class="col col-md-9 col-lg-10">
+        <div class="col-md-9 col-lg-10">
           <Main />
         </div>
       </div>
