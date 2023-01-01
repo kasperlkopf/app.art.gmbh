@@ -30,7 +30,9 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  //
+  const sidebar = document.querySelector('#sidebar');
+
+  sidebar.hide();
 });
 
 const app = createApp({
