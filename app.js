@@ -53,10 +53,10 @@ const app = createApp({
 
     <div class="container-xxl mt-3">
       <div class="row">
-        <div class="col" style="flex: 0 0 256px;">
+        <div class="col col-md-3 col-lg-2 d-md-block">
           <Sidebar />
         </div>
-        <div class="col">
+        <div class="col col-md-9 col-lg-10">
           <Main />
         </div>
       </div>
