@@ -7,7 +7,7 @@ const template = `
     <nav class="container flex-wrap flex-lg-nowrap">
 
       <button class="navbar-toggler p-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
-        <i class="bi bi-three-dots-vertical"></i>
+        <i class="bi bi-list"></i>
       </button>
 
       <a class="navbar-brand py-2" href="#"> 
