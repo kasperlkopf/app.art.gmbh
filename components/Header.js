@@ -4,7 +4,11 @@ import ThemeSelect from '/components/ThemeSelect.js';
 
 const template = `
   <header class="navbar navbar-expand-lg sticky-top border-bottom bg-body top-0 bg-opacity-75" style="backdrop-filter: blur(12px);">
-    <nav class="container-xxl">
+    <nav class="container-xxl flex-wrap flex-lg-nowrap">
+
+      <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+        <i class="bi bi-list"></i>
+      </button>
 
       <a class="navbar-brand py-2" href="#"> 
         <svg class="art-logo d-block" style="height: 32px;" viewBox="0 0 333 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -51,7 +55,7 @@ const template = `
           <ul class="dropdown-menu dropdown-menu-end p-1">
             <li><h6 class="dropdown-header">Öffne Slack...</h6></li>
             <li>
-              <a class="dropdown-item rounded" href="slack://channel?team=T69NHRRFB&id=C69K0LZAL">#art</a>
+              <a class="dropdown-item rounded mb-1" href="slack://channel?team=T69NHRRFB&id=C69K0LZAL">#art</a>
             </li>
             <li>
               <a class="dropdown-item rounded" href="slack://user?team=T69NHRRFB&id=U6HM3CR6C">@manuel</a>

@@ -11,21 +11,21 @@ const template = `
     </a>
     <ul class="dropdown-menu dropdown-menu-end p-1">
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="setTheme('light')">
+        <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" :class="{'active': selectedTheme === 'light'"}" @click="setTheme('light')">
           <i class="bi bi-sun-fill me-2 opacity-50"></i>
           Light
           <i v-if="selectedTheme === 'light'" class="bi bi-check2 ms-auto"></i>
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="setTheme('dark')">
+        <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" :class="{'active': selectedTheme === 'dark'"}" @click="setTheme('dark')">
           <i class="bi bi-moon-stars-fill me-2 opacity-50"></i>
           Dark
           <i v-if="selectedTheme === 'dark'" class="bi bi-check2 ms-auto"></i>
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="setTheme('auto')">
+        <button type="button" class="dropdown-item d-flex align-items-center rounded" :class="{'active': selectedTheme === 'auto'"}" @click="setTheme('auto')">
           <i class="bi bi-circle-half me-2 opacity-50"></i>
           Auto
           <i v-if="selectedTheme === 'auto'" class="bi bi-check2 ms-auto"></i>
