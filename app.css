@@ -4,6 +4,12 @@ body {
   overflow-y: scroll;
 }
 
+/* layout */
+
+aside {
+
+}
+
 /* logo */
 
 [data-bs-theme="dark"] .art-logo g,

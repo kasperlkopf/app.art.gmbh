@@ -63,7 +63,7 @@ const template = `
           </ul>
         </div>
 
-        <ThemeSelect class="nav-item d-none d-lg-block ms-2" />
+        <ThemeSelect class="nav-item d-none d-md-block ms-2" />
       </div>
 
     </nav>
