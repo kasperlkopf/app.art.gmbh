@@ -10,8 +10,11 @@ const template = `
         <nav class="nav flex-column nav-pills mb-auto w-100">
           <router-link to="warehouse" class="nav-link mb-1" active-class="active">Lager</router-link>
           <router-link to="turnover" class="nav-link mb-1" active-class="active">Umsatz</router-link>
-          <hr>
-          <router-link to="turnover" class="nav-link mb-1" active-class="active">Test</router-link>
+          <h6 class="d-flex align-items-center fw-semibold mt-4 mb-3">
+            <i class="bi bi-code-slash me-2"></i> 
+            Experimental
+          </h6>
+          <router-link to="test" class="nav-link mb-1" active-class="active">Test</router-link>
         </nav>
       </div>
     </div>
