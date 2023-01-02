@@ -6,8 +6,6 @@ body {
 
 /* layout */
 
-
-
 @media (min-width: 768px) {
   #app > .container-xxl {
     display: grid;
