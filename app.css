@@ -9,7 +9,7 @@ body {
 
 
 @media (min-width: 768px) {
-  #app .container-xxl {
+  #app > .container-xxl {
     display: grid;
     grid-template-areas: "sidebar main";
     grid-template-columns: 1fr 5fr;
