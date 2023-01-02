@@ -30,6 +30,10 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
+  //
+});
+
+router.afterEach((to, from) => {
   const sidebarEl = document.querySelector('#sidebar');
   const sidebarOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(sidebarEl);
 
