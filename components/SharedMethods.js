@@ -27,15 +27,14 @@ export default {
     getISOWeek(d) {
       const date = d ? new Date(d) : new Date();
 
-      date.setHours(0, 0, 0);
-      date.setDate(date.getDate() + 4 - (date.getDay() || 7));
+      date.setHours(0, 0, 0, 0);
+      date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
 
       const week1 = new Date(date.getFullYear(), 0, 4);
-      week1.setDate(week1.getDate() + 4 - (week1.getDay() || 7));
-
       const diff = date.getTime() - week1.getTime();
-      const weekNum = 1 + Math.ceil(diff / 86400000 / 7);
-      const isoWeek = ('0' + weekNum).substr(-2); // + '/' + date.getFullYear().toString().substr(-2);
+
+      const weekNum = 1 + Math.round((diff / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+      const isoWeek = ('0' + weekNum).substring(-2);
 
       return isoWeek;
     },
