@@ -10,7 +10,7 @@ const template = `
         <i class="bi bi-list"></i>
       </button>
 
-      <a class="navbar-brand py-2" href="#"> 
+      <a class="navbar-brand" href="#"> 
         <svg class="art-logo d-block" style="height: 28px; margin: 5px 0;" viewBox="0 0 333 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g fill-rule="nonzero">
