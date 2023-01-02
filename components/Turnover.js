@@ -57,7 +57,7 @@ const template = `
       </div>
     </div>
 
-    <div class="col-12">
+    <div v-for="i in 10" :key="i" class="col-12">
       <div class="card border-success">
         <div class="card-body">
           <h5 class="card-title">Jahresumsatz</h5>

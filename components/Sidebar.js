@@ -2,7 +2,7 @@
 
 const template = `
   <aside class="d-flex flex-column text-nowrap user-select-none overflow-auto">
-    <div id="sidebar" class="offcanvas-md offcanvas-bottom rounded-top">
+    <div id="sidebar-offcanvas" class="offcanvas-md offcanvas-bottom rounded-top">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title">Navigation</h5>
       </div>

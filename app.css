@@ -6,8 +6,23 @@ body {
 
 /* layout */
 
-aside {
 
+
+@media (min-width: 992px) {
+  #app .container-xxl {
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 1fr 5fr;
+    gap: 1.5rem;
+  }
+}
+
+#app main {
+  grid-area: main;
+}
+
+#app aside {
+  grid-area: sidebar;
 }
 
 /* logo */

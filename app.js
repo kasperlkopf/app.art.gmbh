@@ -34,7 +34,7 @@ router.beforeEach((to, from) => {
 });
 
 router.afterEach((to, from) => {
-  const sidebarEl = document.querySelector('#sidebar');
+  const sidebarEl = document.querySelector('#sidebar-offcanvas');
   const sidebarOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(sidebarEl);
 
   sidebarOffcanvas.hide();
@@ -58,15 +58,9 @@ const app = createApp({
   template: `
     <Header />
 
-    <div class="container-lg mt-3">
-      <div class="row">
-        <div class="col-md-3 col-lg-2">
-          <Sidebar />
-        </div>
-        <div class="col-md-9 col-lg-10">
-          <Main />
-        </div>
-      </div>
+    <div class="container-xxl">
+      <Sidebar />
+      <Main />
     </div>
   `,
 });
