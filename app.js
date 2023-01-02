@@ -58,7 +58,7 @@ const app = createApp({
   template: `
     <Header />
 
-    <div class="container mt-3">
+    <div class="container-lg mt-3">
       <div class="row">
         <div class="col-md-3 col-lg-2">
           <Sidebar />
