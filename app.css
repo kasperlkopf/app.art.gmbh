@@ -15,6 +15,16 @@ body {
     grid-template-columns: 1fr 5fr;
     gap: 1.5rem;
   }
+
+  #app aside {
+    position: sticky;
+    top: 65px;
+    display: block !important;
+    height: calc(100vh - 65px);
+    padding-left: 0.25rem;
+    margin-left: -0.25rem;
+    overflow-y: auto;
+  }
 }
 
 #app main {
