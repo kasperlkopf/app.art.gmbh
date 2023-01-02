@@ -11,7 +11,7 @@ const template = `
       </button>
 
       <a class="navbar-brand py-2" href="#"> 
-        <svg class="art-logo d-block" style="height: 32px;" viewBox="0 0 333 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg class="art-logo d-block" style="height: 28px; margin: 5px 0;" viewBox="0 0 333 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g fill-rule="nonzero">
               <path d="M38.336,36.557 L65.174,36.557 L65.174,65.59 L0.189,65.59 L0.189,36.389 C0.189,16.64 16.224,0.605 35.973,0.605 L65.174,0.605 L65.174,29.469 L45.425,29.469 C41.543,29.468 38.336,32.675 38.336,36.557 Z" fill="#183264"></path>
