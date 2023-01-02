@@ -1,7 +1,7 @@
 // Main.js
 
 const template = `
-  <main>
+  <main class="py-3">
     <router-view v-slot="{ Component }">
       <component :is="Component" />
     </router-view>
