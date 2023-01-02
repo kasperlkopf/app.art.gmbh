@@ -25,6 +25,10 @@ const router = createRouter({
       path: '/turnover',
       component: () => import('/components/Turnover.js'),
     },
+    {
+      path: '/test',
+      component: () => import('/components/Test.js'),
+    },
   ],
 });
 

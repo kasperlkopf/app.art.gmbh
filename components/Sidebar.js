@@ -10,6 +10,8 @@ const template = `
         <nav class="nav flex-column nav-pills mb-auto w-100">
           <router-link to="warehouse" class="nav-link mb-1" active-class="active">Lager</router-link>
           <router-link to="turnover" class="nav-link mb-1" active-class="active">Umsatz</router-link>
+          <hr>
+          <router-link to="turnover" class="nav-link mb-1" active-class="active">Test</router-link>
         </nav>
       </div>
     </div>
