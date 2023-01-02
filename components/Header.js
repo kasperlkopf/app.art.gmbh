@@ -6,9 +6,9 @@ const template = `
   <header class="navbar navbar-expand-md sticky-top border-bottom bg-body top-0 bg-opacity-75" style="backdrop-filter: blur(12px);">
     <nav class="container flex-wrap flex-lg-nowrap">
 
-      <button class="navbar-toggler nav-link p-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+      <a class="navbar-toggler nav-link p-2 border-0" href="#" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
         <i class="bi bi-list"></i>
-      </button>
+      </a>
 
       <a class="navbar-brand py-2" href="#"> 
         <svg class="art-logo d-block" style="height: 32px;" viewBox="0 0 333 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
