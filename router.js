@@ -34,8 +34,8 @@ const router = VueRouter.createRouter({
       },
     },
     {
-      path: '/test',
-      component: () => import('/components/Test.js'),
+      path: '/lorem-ipsum',
+      component: () => import('/components/LoremIpsum.js'),
       meta: {
         isRestricted: false,
       },
