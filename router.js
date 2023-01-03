@@ -16,19 +16,14 @@ const router = VueRouter.createRouter({
       isRestricted: false,
     },
     {
-      path: '/lieferprobleme',
-      component: () => import('/components/DeliveryProblems.js'),
+      path: '/turnover',
+      component: () => import('/components/Turnover.js'),
       isRestricted: false,
     },
     {
       path: '/warehouse',
       component: () => import('/components/Warehouse.js'),
       isRestricted: true,
-    },
-    {
-      path: '/turnover',
-      component: () => import('/components/Turnover.js'),
-      isRestricted: false,
     },
     {
       path: '/test',
