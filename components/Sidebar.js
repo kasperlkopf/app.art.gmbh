@@ -8,13 +8,13 @@ const template = `
     </div>
     <div class="offcanvas-body">
       <nav class="nav flex-column nav-pills mb-auto w-100">
-        <router-link to="warehouse" class="nav-link mb-1" active-class="active">Lager</router-link>
-        <router-link to="turnover" class="nav-link mb-1" active-class="active">Umsatz</router-link>
+        <router-link v-if="isOkay" to="warehouse" class="nav-link mb-1" active-class="active">Lager</router-link>
+        <router-link v-if="isOkay" to="turnover" class="nav-link mb-1" active-class="active">Umsatz</router-link>
         <h6 class="d-flex align-items-center fw-semibold mt-4 mb-3">
           <i class="bi bi-code-slash me-2"></i> 
           Experimental
         </h6>
-        <router-link to="test" class="nav-link mb-1" active-class="active">Test</router-link>
+        <router-link v-if="isOkay" to="test" class="nav-link mb-1" active-class="active">Test</router-link>
       </nav>
     </div>
   </aside>
@@ -29,9 +29,7 @@ export default {
   },
   computed: {
     isOkay() {
-      const notAllowed = ['warehouse'];
-
-      return this.$route;
+      return !this.$route.meta.isRestricted;
     },
   },
   created() {
