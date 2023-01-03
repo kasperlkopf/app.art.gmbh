@@ -10,7 +10,7 @@ const template = `
         <router-link v-if="isAllowed || currentPath === 'status'" to="status" class="nav-link mb-1" active-class="active">Status</router-link>
         <router-link v-if="isAllowed || currentPath === 'turnover'" to="turnover" class="nav-link mb-1" active-class="active">Umsatz</router-link>
         <router-link v-if="isAllowed || currentPath === 'warehouse'" to="warehouse" class="nav-link mb-1" active-class="active">Lager</router-link>
-        <router-link v-if="isAllowed || currentPath === 'lorem-ipsum'" to="test" class="nav-link mb-1" active-class="active">Lorem ipsum</router-link>
+        <router-link v-if="isAllowed || currentPath === 'lorem-ipsum'" to="lorem-ipsum" class="nav-link mb-1" active-class="active">Lorem ipsum</router-link>
       </nav>
     </div>
   </aside>
