@@ -6,6 +6,10 @@ body {
 
 /* layout */
 
+.container-xxl {
+  max-width: 960px !important;
+}
+
 @media (min-width: 768px) {
   #app main {
     margin-left: 256px;
