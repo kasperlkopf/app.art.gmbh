@@ -33,8 +33,8 @@ const app = Vue.createApp({
 
       <main class="py-3">
         <!-- loading -->
-        <div v-if="isLoading" class="d-flex justify-content-center">
-          <div class="spinner-border" role="status"></div>
+        <div v-if="isLoading" class="d-flex justify-content-center py-3">
+          <div class="spinner-border text-primary" role="status"></div>
         </div>
 
         <router-view v-slot="{ Component }">
