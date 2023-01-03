@@ -31,7 +31,7 @@ export default {
       return this.$route.path.slice(1);
     },
     isAllowed() {
-      return !this.$route.meta.isRestricted;
+      return !this.$route.isRestricted;
     },
   },
   created() {
