@@ -1,7 +1,7 @@
 // Sidebar.js
 
 const template = `
-  <aside id="sidebar" class="offcanvas-md offcanvas-start text-nowrap user-select-none overflow-auto py-md-3 position-fixed" style="width: 256px;">
+  <aside id="sidebar" class="offcanvas-md offcanvas-start text-nowrap user-select-none overflow-auto p-md-3 ps-0 position-fixed" style="width: 256px;">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title">Navigation</h5>
     </div>
