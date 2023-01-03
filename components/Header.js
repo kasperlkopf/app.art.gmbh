@@ -47,7 +47,7 @@ const template = `
 
       <div class="d-flex">
         <!-- slack -->
-        <div class="nav-item dropdown me-3">
+        <div class="nav-item dropdown me-3 shadow">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-slack me-1"></i>
             <span class="d-none ms-2">Toggle theme</span>
