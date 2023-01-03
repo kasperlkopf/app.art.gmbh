@@ -4,12 +4,14 @@ import router from '/router.js';
 import store from '/store.js';
 
 import Header from '/components/Header.js';
+import ProgressBar from '/components/ProgressBar.js';
 import Sidebar from '/components/Sidebar.js';
 
 const app = Vue.createApp({
   name: 'App',
   components: {
     Header,
+    ProgressBar,
     Sidebar,
   },
   data() {
@@ -28,8 +30,10 @@ const app = Vue.createApp({
   template: `
     <Header />
 
+    <!-- loading -->
+    <ProgressBar v-if="isLoading || hasError" :error="hasError" class="position-relative mb-3" />
+
     <div class="container-xxl">
-    {{ isLoading }}
       <Sidebar />
 
       <main class="py-3">
