@@ -5,14 +5,6 @@ import StatusIcon from '/components/StatusIcon.js';
 const template = `
   <div class="status">
 
-    <div class="p-5 text-bg-success rounded-3 mb-3">
-      <h2>Netzwerk</h2>   
-    </div>
-
-    <div class="p-5 text-bg-success rounded-3 mb-3">
-      <h2>myfactory</h2>   
-    </div>
-
     <!-- group -->
     <ul class="list-group mb-4">
       <header class="d-flex align-items-center list-group-item">

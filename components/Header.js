@@ -47,12 +47,12 @@ const template = `
 
       <div class="d-flex">
         <!-- slack -->
-        <div class="nav-item dropdown me-3 shadow">
+        <div class="nav-item dropdown me-3">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-slack me-1"></i>
             <span class="d-none ms-2">Toggle theme</span>
           </a>
-          <ul class="dropdown-menu dropdown-menu-end p-1">
+          <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
             <li><h6 class="dropdown-header">Öffne Slack...</h6></li>
             <li>
               <a class="dropdown-item rounded mb-1" href="slack://channel?team=T69NHRRFB&id=C69K0LZAL">#art</a>
