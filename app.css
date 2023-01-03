@@ -7,28 +7,9 @@ body {
 /* layout */
 
 @media (min-width: 768px) {
-  #app > .container-xxl {
-    display: grid;
-    grid-template-areas: "sidebar main";
-    grid-template-columns: 1fr 5fr;
-    gap: 1.5rem;
+  #app main {
+    margin-left: 256px;
   }
-
-  #app aside {
-    position: sticky;
-    top: 65px;
-    display: block !important;
-    height: calc(100vh - 65px);
-    overflow-y: auto;
-  }
-}
-
-#app main {
-  grid-area: main;
-}
-
-#app aside {
-  grid-area: sidebar;
 }
 
 /* logo */
