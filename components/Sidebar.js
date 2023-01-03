@@ -1,6 +1,7 @@
 // Sidebar.js
 
 const template = `
+{{ isOkay }}
   <aside id="sidebar" class="offcanvas-md offcanvas-start text-nowrap user-select-none overflow-auto position-fixed py-md-3 pe-md-3" style="width: 256px;">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title">Navigation</h5>
@@ -25,6 +26,13 @@ export default {
     return {
       //
     };
+  },
+  computed: {
+    isOkay() {
+      const notAllowed = ['warehouse'];
+
+      return this.$route;
+    },
   },
   created() {
     console.log('Sidebar: created');
