@@ -71,6 +71,13 @@ const template = `
     </div>
 
   </div>
+
+  <footer class="d-flex justify-content-end mt-2">
+    <button class="btn btn-link text-decoration-none p-0" @click="getTurnover" :disabled="isLoading">
+      <i class="bi bi-arrow-clockwise me-1"></i>
+      <span>Neuladen</span>
+    </button>
+  </footer>
 `;
 
 export default {
