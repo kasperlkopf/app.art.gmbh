@@ -42,7 +42,7 @@ router.afterEach((to, from) => {
 
   offcanvas.hide();
 
-  setTimeout(() => store.dispatch('toggleLoading', false), 10000);
+  store.dispatch('toggleLoading', false);
 });
 
 export default router;

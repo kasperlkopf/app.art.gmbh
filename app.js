@@ -4,7 +4,6 @@ import router from '/router.js';
 import store from '/store.js';
 
 import Header from '/components/Header.js';
-import ProgressBar from '/components/ProgressBar.js';
 import Sidebar from '/components/Sidebar.js';
 
 const app = Vue.createApp({
@@ -30,13 +29,15 @@ const app = Vue.createApp({
   template: `
     <Header />
 
-    <!-- loading -->
-    <ProgressBar v-if="isLoading" class="position-relative" style="height: 2px;" />
-
     <div class="container-xxl">
       <Sidebar />
 
       <main class="py-3">
+        <!-- loading -->
+        <div v-if="isLoading" class="d-flex justify-content-center">
+          <div class="spinner-border" role="status"></div>
+        </div>
+
         <router-view v-slot="{ Component }">
           <component :is="Component" />
         </router-view>
