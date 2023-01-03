@@ -1,5 +1,7 @@
 // router.js
 
+import store from '/store.js';
+
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
   routes: [
@@ -31,7 +33,7 @@ const router = VueRouter.createRouter({
 });
 
 router.beforeEach((to, from) => {
-  this.$store.dispatch('toggleLoading', true);
+  store.dispatch('toggleLoading', true);
 });
 
 router.afterEach((to, from) => {
@@ -40,7 +42,7 @@ router.afterEach((to, from) => {
 
   offcanvas.hide();
 
-  this.$store.dispatch('toggleLoading', false);
+  store.dispatch('toggleLoading', false);
 });
 
 export default router;
