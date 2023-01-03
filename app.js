@@ -10,7 +10,6 @@ const app = Vue.createApp({
   name: 'App',
   components: {
     Header,
-    ProgressBar,
     Sidebar,
   },
   data() {
