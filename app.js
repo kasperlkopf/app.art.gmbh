@@ -14,6 +14,10 @@ const router = createRouter({
       component: () => import('/components/Index.js'),
     },
     {
+      path: '/status',
+      component: () => import('/components/Status.js'),
+    },
+    {
       path: '/lieferprobleme',
       component: () => import('/components/DeliveryProblems.js'),
     },
