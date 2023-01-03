@@ -9,7 +9,6 @@ const router = VueRouter.createRouter({
       path: '/',
       component: () => import('/components/Index.js'),
       meta: {
-        isRestricted: false,
         requiresAuth: true,
       },
     },
@@ -17,7 +16,6 @@ const router = VueRouter.createRouter({
       path: '/status',
       component: () => import('/components/Status.js'),
       meta: {
-        isRestricted: false,
         requiresAuth: true,
       },
     },
@@ -25,7 +23,6 @@ const router = VueRouter.createRouter({
       path: '/turnover',
       component: () => import('/components/Turnover.js'),
       meta: {
-        isRestricted: false,
         requiresAuth: true,
       },
     },
@@ -33,7 +30,6 @@ const router = VueRouter.createRouter({
       path: '/warehouse',
       component: () => import('/components/Warehouse.js'),
       meta: {
-        isRestricted: true,
         requiresAuth: false,
       },
     },
@@ -41,7 +37,6 @@ const router = VueRouter.createRouter({
       path: '/lorem-ipsum',
       component: () => import('/components/LoremIpsum.js'),
       meta: {
-        isRestricted: false,
         requiresAuth: true,
       },
     },
