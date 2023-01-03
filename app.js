@@ -31,7 +31,7 @@ const app = Vue.createApp({
     <Header />
 
     <!-- loading -->
-    <ProgressBar v-if="isLoading" class="position-relative" style="height: 1px;" />
+    <ProgressBar v-if="isLoading" class="position-relative" style="height: 2px;" />
 
     <div class="container-xxl">
       <Sidebar />
