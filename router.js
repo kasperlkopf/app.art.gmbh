@@ -31,7 +31,7 @@ const router = VueRouter.createRouter({
 });
 
 router.beforeEach((to, from) => {
-  //
+  this.$store.dispatch('toggleLoading', true);
 });
 
 router.afterEach((to, from) => {
@@ -39,6 +39,8 @@ router.afterEach((to, from) => {
   const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(sidebar);
 
   offcanvas.hide();
+
+  this.$store.dispatch('toggleLoading', false);
 });
 
 export default router;

@@ -53,13 +53,6 @@ input[type="week"]::-webkit-calendar-picker-indicator {
   height: auto;
 }
 
-/* form-floating */
-
-.form-floating > label,
-.form-floating > input:focus {
-  z-index: 3 !important;
-}
-
 /* input number cosmetics */
 
 input::-webkit-outer-spin-button,

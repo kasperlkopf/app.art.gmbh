@@ -1,6 +1,7 @@
 // app.js
 
 import router from '/router.js';
+import store from '/store.js';
 
 import Header from '/components/Header.js';
 import Sidebar from '/components/Sidebar.js';
@@ -16,6 +17,11 @@ const app = Vue.createApp({
       //
     };
   },
+  computed: {
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
+  },
   created() {
     console.log('App: created');
   },
@@ -23,6 +29,7 @@ const app = Vue.createApp({
     <Header />
 
     <div class="container-xxl">
+    {{ isLoading }}
       <Sidebar />
 
       <main class="py-3">
@@ -35,4 +42,6 @@ const app = Vue.createApp({
 });
 
 app.use(router);
+app.use(store);
+
 app.mount('#app');
