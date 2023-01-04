@@ -27,7 +27,7 @@ export default {
       return routes.filter((el) => !el.meta.requiresAuth || (el.meta.requiresAuth && this.hasAuth));
     },
     hasAuth() {
-      return localStorage.getItem('auth', true);
+      return this.$store.getters.hasAuth;
     },
   },
   created() {

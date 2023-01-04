@@ -45,13 +45,13 @@ router.beforeEach((to, from, next) => {
 
   // auth
   if (to.path === '/auth') {
-    localStorage.setItem('auth', true);
+    store.dispatch('toggleAuth', true);
 
     next({ path: '/status' });
   }
 
   if (to.meta.requiresAuth) {
-    const hasAuth = localStorage.getItem('auth', true);
+    const hasAuth = store.getAuth();
 
     if (hasAuth) {
       next();

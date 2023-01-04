@@ -5,12 +5,16 @@ const store = Vuex.createStore({
     return {
       isLoading: false,
       loadingTimeout: null,
+      hasAuth: false,
     };
   },
   mutations: {
     toggleLoading(state, loadingState) {
       state.isLoading = loadingState;
     },
+    toggleAuth(state, authState) {
+      localStorage.setItem('auth', authState);
+    }
   },
   actions: {
     toggleLoading({ commit, state }, loadingState) {
@@ -22,7 +26,15 @@ const store = Vuex.createStore({
         commit('toggleLoading', loadingState);
       }
     },
+    toggleAuth({ commit }, authState) {
+      commit('toggleAuth', authState);
+    },
   },
+  getters: {
+    hasAuth() {
+      return localStorage.getItem('auth');
+    },
+  }
 });
 
 export default store;
