@@ -66,23 +66,24 @@ const template = `
             <i class="bi bi-gear-fill"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
+            <li><h6 class="dropdown-header">Design</h6></li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" :class="{'active': selectedTheme === 'light'}" @click="setTheme('light')">
-                <i class="bi bi-sun-fill me-2 opacity-50"></i>
+                <i class="bi bi-sun-fill me-2"></i>
                 Light
                 <i v-if="selectedTheme === 'light'" class="bi bi-check2 ms-auto"></i>
               </button>
             </li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" :class="{'active': selectedTheme === 'dark'}" @click="setTheme('dark')">
-                <i class="bi bi-moon-stars-fill me-2 opacity-50"></i>
+                <i class="bi bi-moon-stars-fill me-2"></i>
                 Dark
                 <i v-if="selectedTheme === 'dark'" class="bi bi-check2 ms-auto"></i>
               </button>
             </li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" :class="{'active': selectedTheme === 'auto'}" @click="setTheme('auto')">
-                <i class="bi bi-circle-half me-2 opacity-50"></i>
+                <i class="bi bi-circle-half me-2"></i>
                 Auto
                 <i v-if="selectedTheme === 'auto'" class="bi bi-check2 ms-auto"></i>
               </button>
