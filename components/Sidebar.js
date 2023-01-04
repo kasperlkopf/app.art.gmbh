@@ -27,7 +27,7 @@ export default {
       return this.hasAuth ? routes : routes.filter((el) => !el.meta.requiresAuth);
     },
     hasAuth() {
-      return this.$store.state.hasAuth;
+      return this.$store.getters.hasAuth;
     },
   },
   created() {

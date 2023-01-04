@@ -114,6 +114,9 @@ export default {
     hasAuth() {
       return this.$store.getters.hasAuth;
     },
+    username() {
+      return this.$store.state.user === 'guest' ? 'Gast' : 'Admin'; 
+    },
   },
   created() {
     console.log('Header: created');
