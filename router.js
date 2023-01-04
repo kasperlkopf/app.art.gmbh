@@ -6,10 +6,6 @@ const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
   routes: [
     {
-      path: '/',
-      component: () => import('/components/Index.js'),
-    },
-    {
       path: '/status',
       name: 'Status',
       component: () => import('/components/Status.js'),
