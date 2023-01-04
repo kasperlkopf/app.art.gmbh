@@ -4,7 +4,7 @@ const template = `
   <header class="navbar navbar-expand-md sticky-top border-bottom bg-body bg-opacity-75" style="backdrop-filter: blur(12px);">
     <nav class="container-xxl flex-wrap flex-nowrap">
 
-      <button class="btn btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+      <button class="btn btn-link d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
         <i class="bi bi-three-dots-vertical"></i>
       </button>
 
@@ -45,7 +45,7 @@ const template = `
 
       <div class="d-flex">
         <!-- slack -->
-        <div class="dropdown me-3 d-none d-md-block">
+        <div class="dropdown d-none d-md-block">
           <button class="btn btn-link" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-slack me-1"></i>
           </button>
