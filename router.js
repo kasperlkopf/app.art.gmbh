@@ -48,6 +48,10 @@ router.beforeEach((to, from, next) => {
     store.dispatch('toggleAuth', true);
 
     next({ path: '/status' });
+  } else if (to.path === '/logout') {
+    store.dispatch('toggleAuth', false);
+
+    next({ path: '/status' });
   }
 
   if (to.meta.requiresAuth) {
