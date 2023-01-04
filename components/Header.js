@@ -2,9 +2,9 @@
 
 const template = `
   <header class="navbar navbar-expand-md sticky-top border-bottom bg-body top-0 bg-opacity-75" style="backdrop-filter: blur(12px);">
-    <nav class="container-xxl flex-wrap flex-lg-nowrap">
+    <nav class="container-xxl flex-wrap flex-nowrap">
 
-      <button class="navbar-toggler nav-link p-2 border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+      <button class="btn btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
         <i class="bi bi-three-dots-vertical"></i>
       </button>
 
@@ -46,9 +46,9 @@ const template = `
       <div class="d-flex">
         <!-- slack -->
         <div class="nav-item dropdown me-3 d-none d-md-block">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-display="static">
+          <button class="btn btn-link" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-slack me-1"></i>
-          </a>
+          </button>
           <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
             <li><h6 class="dropdown-header">Öffne Slack...</h6></li>
             <li>
@@ -62,9 +62,9 @@ const template = `
 
         <!-- settings -->
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-display="static">
+          <button class="btn btn-link" href="#" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-gear-fill"></i>
-          </a>
+          </button>
           <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
             <li><h6 class="dropdown-header">Design</h6></li>
             <li>
