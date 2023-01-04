@@ -1,7 +1,5 @@
 // Header.js
 
-import ThemeSelect from '/components/ThemeSelect.js';
-
 const template = `
   <header class="navbar navbar-expand-md sticky-top border-bottom bg-body top-0 bg-opacity-75" style="backdrop-filter: blur(12px);">
     <nav class="container-xxl flex-wrap flex-lg-nowrap">
@@ -107,9 +105,6 @@ const template = `
 
 export default {
   name: 'Header',
-  components: {
-    ThemeSelect,
-  },
   data() {
     return {
       //
