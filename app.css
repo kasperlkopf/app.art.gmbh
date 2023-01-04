@@ -22,7 +22,7 @@ body {
 /* header */
 
 header .btn.btn-link {
-  color: var(--bs-body-color);
+  color: rgba(var(--bs-body-color-rgb),var(--bs-text-opacity));
 }
 
 header .btn.btn-link:hover {
