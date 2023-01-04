@@ -5,7 +5,7 @@ const store = Vuex.createStore({
     return {
       isLoading: false,
       loadingTimeout: null,
-      hasAuth: false,
+      hasAuth: localStorage.getItem('auth'),
     };
   },
   mutations: {
@@ -13,6 +13,7 @@ const store = Vuex.createStore({
       state.isLoading = loadingState;
     },
     toggleAuth(state, authState) {
+      state.hasAuth = authState;
       localStorage.setItem('auth', authState);
     }
   },
@@ -30,11 +31,6 @@ const store = Vuex.createStore({
       commit('toggleAuth', authState);
     },
   },
-  getters: {
-    hasAuth() {
-      return localStorage.getItem('auth');
-    },
-  }
 });
 
 export default store;

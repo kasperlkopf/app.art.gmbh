@@ -53,7 +53,7 @@ router.beforeEach((to, from, next) => {
 
     next({ path: '/status' });
   } else if (to.meta.requiresAuth) {
-    const hasAuth = store.getters.hasAuth;
+    const hasAuth = store.state.hasAuth;
 
     if (hasAuth) {
       next();
