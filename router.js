@@ -58,7 +58,7 @@ router.beforeEach((to, from, next) => {
     if (hasAuth) {
       next();
     } else {
-      return false;
+      next({ path: '/status' });
     }
   } else {
     next();
