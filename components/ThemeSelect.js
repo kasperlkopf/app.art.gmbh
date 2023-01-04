@@ -7,7 +7,6 @@ const template = `
       <i v-if="selectedTheme === 'light'" class="bi bi-sun-fill me-1"></i>
       <i v-else-if="selectedTheme === 'dark'" class="bi bi-moon-stars-fill me-1"></i>
       <i v-else class="bi bi-circle-half me-1"></i>
-      <span class="d-none ms-2">Toggle theme</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
       <li>

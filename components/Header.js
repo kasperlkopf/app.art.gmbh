@@ -50,7 +50,6 @@ const template = `
         <div class="nav-item dropdown me-3">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-slack me-1"></i>
-            <span class="d-none ms-2">Toggle theme</span>
           </a>
           <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
             <li><h6 class="dropdown-header">Öffne Slack...</h6></li>
@@ -63,7 +62,22 @@ const template = `
           </ul>
         </div>
 
-        <ThemeSelect class="nav-item d-none d-md-block ms-2" />
+        <ThemeSelect class="nav-item d-none d-md-block me-3" />
+
+        <!-- settings -->
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-display="static">
+            <i class="bi bi-gear-fill"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
+            <li v-if="hasAuth">
+              <a class="dropdown-item rounded" href="#" @click="toggleAuth(false)">Abmelden</a>
+            </li>
+            <li v-else>
+              <a class="dropdown-item rounded rounded" href="#" @click="toggleAuth(true)">Anmelden</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
     </nav>
@@ -80,8 +94,18 @@ export default {
       //
     };
   },
+  computed: {
+    hasAuth() {
+      return this.$store.state.hasAuth;
+    },
+  },
   created() {
     console.log('Header: created');
+  },
+  methods: {
+    toggleAuth(s) {
+      this.$store.dispatch('toggleAuth', true);
+    }
   },
   template,
 };
