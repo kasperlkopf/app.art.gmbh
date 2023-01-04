@@ -25,7 +25,7 @@ export default {
     availableRoutes() {
       const routes = this.$router.getRoutes();
 
-      return routes.filter((el) => !el.meta.requiresAuth || (el.meta.requiresAuth && this.hasAuth));
+      return routes.filter((el) => el.meta.requiresAuth && this.hasAuth);
     },
     hasAuth() {
       return this.$store.state.hasAuth;
