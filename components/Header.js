@@ -93,7 +93,7 @@ const template = `
               <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="toggleUser">
                 <i v-if="hasAuth" class="bi bi-unlock-fill me-2"></i>
                 <i v-else class="bi bi-lock-fill me-2"></i>
-                User
+                {{ username }}
               </button>
             </li>
           </ul>
