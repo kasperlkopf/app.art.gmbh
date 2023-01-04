@@ -21,11 +21,11 @@ body {
 
 /* header */
 
-header .btn.btn-link {
+#app header .btn.btn-link {
   color: rgba(var(--bs-body-color-rgb),var(--bs-text-opacity));
 }
 
-header .btn.btn-link:hover {
+#app header .btn.btn-link:hover {
   color: var(--bs-emphasis-color);
 }
 
