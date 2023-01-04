@@ -81,12 +81,13 @@ const template = `
               </button>
             </li>
             <li>
-              <button type="button" class="dropdown-item d-flex align-items-center rounded" :class="{'active': selectedTheme === 'auto'}" @click="setTheme('auto')">
+              <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" :class="{'active': selectedTheme === 'auto'}" @click="setTheme('auto')">
                 <i class="bi bi-circle-half me-2 opacity-50"></i>
                 Auto
                 <i v-if="selectedTheme === 'auto'" class="bi bi-check2 ms-auto"></i>
               </button>
             </li>
+            <li><hr class="dropdown-divider"></li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="toggleUser">
                 <i v-if="hasAuth" class="bi bi-unlock-fill me-2"></i>
@@ -143,7 +144,7 @@ export default {
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     },
     toggleUser() {
-      this.$store.dispatch('toggleUser', val);
+      this.$store.dispatch('toggleUser');
     },
   },
   template,
