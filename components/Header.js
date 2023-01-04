@@ -62,19 +62,40 @@ const template = `
           </ul>
         </div>
 
-        <ThemeSelect class="nav-item d-none d-md-block me-3" />
-
         <!-- settings -->
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-gear-fill"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
-            <li v-if="hasAuth">
-              <a class="dropdown-item rounded" href="#" @click="toggleAuth(false)">Abmelden</a>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" :class="{'active': selectedTheme === 'light'}" @click="setTheme('light')">
+                <i class="bi bi-sun-fill me-2 opacity-50"></i>
+                Light
+                <i v-if="selectedTheme === 'light'" class="bi bi-check2 ms-auto"></i>
+              </button>
             </li>
-            <li v-else>
-              <a class="dropdown-item rounded rounded" href="#" @click="toggleAuth(true)">Anmelden</a>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" :class="{'active': selectedTheme === 'dark'}" @click="setTheme('dark')">
+                <i class="bi bi-moon-stars-fill me-2 opacity-50"></i>
+                Dark
+                <i v-if="selectedTheme === 'dark'" class="bi bi-check2 ms-auto"></i>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center rounded" :class="{'active': selectedTheme === 'auto'}" @click="setTheme('auto')">
+                <i class="bi bi-circle-half me-2 opacity-50"></i>
+                Auto
+                <i v-if="selectedTheme === 'auto'" class="bi bi-check2 ms-auto"></i>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="toggleAuth">
+                <i v-if="hasAuth" class="bi bi-unlock-fill"></i>
+                <i v-else class="bi bi-lock-fill"></i>
+                Auth
+                <i v-if="hasAuth" class="bi bi-check2 ms-auto"></i>
+              </button>
             </li>
           </ul>
         </div>
@@ -103,9 +124,33 @@ export default {
     console.log('Header: created');
   },
   methods: {
-    toggleAuth(authState) {
-      this.$store.dispatch('toggleAuth', authState);
-    }
+    setTheme(t) {
+      const theme = t ? t : this.getPreferredTheme();
+
+      this.selectedTheme = theme;
+
+      if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      }
+
+      localStorage.setItem('theme', theme);
+    },
+    getPreferredTheme() {
+      const storedTheme = localStorage.getItem('theme');
+
+      if (storedTheme) {
+        return storedTheme;
+      }
+
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    },
+    toggleAuth() {
+      const newAuth = !this.hasAuth;
+
+      this.$store.dispatch('toggleAuth', newAuth);
+    },
   },
   template,
 };
