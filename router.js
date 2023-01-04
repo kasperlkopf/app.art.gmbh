@@ -34,6 +34,8 @@ const router = VueRouter.createRouter({
 
 router.beforeEach((to, from) => {
   store.dispatch('toggleLoading', true);
+
+  comsole.log(to);
 });
 
 router.afterEach((to, from) => {
