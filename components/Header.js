@@ -47,7 +47,7 @@ const template = `
         <!-- slack -->
         <div class="dropdown d-none d-md-block">
           <button class="btn btn-link" data-bs-toggle="dropdown" data-bs-display="static">
-            <i class="bi bi-slack me-1"></i>
+            <i class="bi bi-slack"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
             <li><h6 class="dropdown-header">Öffne Slack...</h6></li>
