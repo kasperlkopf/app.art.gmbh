@@ -1,7 +1,7 @@
 // Header.js
 
 const template = `
-  <header class="navbar navbar-expand-md sticky-top border-bottom bg-body top-0 bg-opacity-75" style="backdrop-filter: blur(12px);">
+  <header class="navbar navbar-expand-md sticky-top border-bottom bg-body bg-opacity-75" style="backdrop-filter: blur(12px);">
     <nav class="container-xxl flex-wrap flex-nowrap">
 
       <button class="btn btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
@@ -45,8 +45,8 @@ const template = `
 
       <div class="d-flex">
         <!-- slack -->
-        <div class="nav-item dropdown me-3 d-none d-md-block">
-          <button class="btn btn-link d-md-none" data-bs-toggle="dropdown" data-bs-display="static">
+        <div class="dropdown me-3 d-none d-md-block">
+          <button class="btn btn-link" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-slack me-1"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
@@ -61,8 +61,8 @@ const template = `
         </div>
 
         <!-- settings -->
-        <div class="nav-item dropdown">
-          <button class="btn btn-link" href="#" data-bs-toggle="dropdown" data-bs-display="static">
+        <div class="dropdown">
+          <button class="btn btn-link" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-gear-fill"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end p-1 shadow">

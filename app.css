@@ -19,6 +19,16 @@ body {
   fill: #ffffff !important;
 }
 
+/* header */
+
+header .btn.btn-link {
+  color: var(--bs-body-color);
+}
+
+header .btn.btn-link:hover {
+  color: var(--bs-emphasis-color);
+}
+
 /* sidebar */
 
 #app aside .nav-link:not(.active),
