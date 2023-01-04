@@ -103,8 +103,8 @@ export default {
     console.log('Header: created');
   },
   methods: {
-    toggleAuth(s) {
-      this.$store.dispatch('toggleAuth', true);
+    toggleAuth(authState) {
+      this.$store.dispatch('toggleAuth', authState);
     }
   },
   template,
