@@ -107,7 +107,7 @@ export default {
   name: 'Header',
   data() {
     return {
-      //
+      selectedTheme: '',
     };
   },
   computed: {
