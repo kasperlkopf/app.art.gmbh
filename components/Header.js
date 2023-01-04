@@ -45,7 +45,7 @@ const template = `
 
       <div class="d-flex">
         <!-- slack -->
-        <div class="dropdown d-none d-md-block">
+        <div class="dropdown me-2 d-none d-md-block">
           <button class="btn btn-link" data-bs-toggle="dropdown" data-bs-display="static">
             <i class="bi bi-slack"></i>
           </button>
