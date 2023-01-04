@@ -6,14 +6,8 @@ const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
   routes: [
     {
-      path: '/',
-      component: () => import('/components/Index.js'),
-      meta: {
-        requiresAuth: true,
-      },
-    },
-    {
       path: '/status',
+      name: 'Status',
       component: () => import('/components/Status.js'),
       meta: {
         requiresAuth: true,
@@ -21,6 +15,7 @@ const router = VueRouter.createRouter({
     },
     {
       path: '/turnover',
+      name: 'Umsatz',
       component: () => import('/components/Turnover.js'),
       meta: {
         requiresAuth: true,
@@ -28,6 +23,7 @@ const router = VueRouter.createRouter({
     },
     {
       path: '/warehouse',
+      name: 'Lager',
       component: () => import('/components/Warehouse.js'),
       meta: {
         requiresAuth: false,
@@ -35,6 +31,7 @@ const router = VueRouter.createRouter({
     },
     {
       path: '/lorem-ipsum',
+      name: 'Lorem ipsum',
       component: () => import('/components/LoremIpsum.js'),
       meta: {
         requiresAuth: true,

@@ -7,6 +7,8 @@ const template = `
     </div>
     <div class="offcanvas-body">
       <nav class="nav flex-column nav-pills mb-auto w-100">
+        <router-link v-for="route in availableRoutes" :to="route.path" class="nav-link mb-1" active-class="active">{{ route.name }}</router-link>
+        <hr>
         <router-link v-if="!requiresAuth || currentPath === 'status'" to="status" class="nav-link mb-1" active-class="active">Status</router-link>
         <router-link v-if="!requiresAuth || currentPath === 'turnover'" to="turnover" class="nav-link mb-1" active-class="active">Umsatz</router-link>
         <router-link v-if="!requiresAuth || currentPath === 'warehouse'" to="warehouse" class="nav-link mb-1" active-class="active">Lager</router-link>
@@ -14,7 +16,6 @@ const template = `
       </nav>
     </div>
   </aside>
-  {{ routes }}
 `;
 
 export default {
@@ -25,14 +26,10 @@ export default {
     };
   },
   computed: {
-    routes() {
-      return this.$router;
-    },
-    currentPath() {
-      return this.$route.path.slice(1);
-    },
-    requiresAuth() {
-      return !this.$route.meta.requiresAuth;
+    availableRoutes() {
+      const routes = this.$router.routes.slice();
+
+      return routes.filter((el) => !el.meta.requiresAuth || (el.meta.requiresAuth && this.hasAuth));
     },
     hasAuth() {
       return localStorage.getItem('auth', true);
