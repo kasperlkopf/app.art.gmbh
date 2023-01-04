@@ -37,6 +37,8 @@ export default {
   },
   created() {
     console.log('Sidebar: created');
+
+    console.log(this.$router);
   },
   template,
 };
