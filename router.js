@@ -46,8 +46,11 @@ const router = VueRouter.createRouter({
 router.beforeEach((to, from, next) => {
   store.dispatch('toggleLoading', true);
 
+  // auth
   if (to.path === '/auth') {
     localStorage.setItem('auth', true);
+
+    next({ path: '/status' });
   }
 
   if (to.meta.requiresAuth) {
