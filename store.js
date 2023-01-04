@@ -5,20 +5,20 @@ const store = Vuex.createStore({
     return {
       isLoading: false,
       loadingTimeout: null,
-      hasAuth: localStorage.getItem('auth'),
+      user: localStorage.getItem('user'),
     };
   },
   mutations: {
     toggleLoading(state, loadingState) {
       state.isLoading = loadingState;
     },
-    toggleAuth(state, authState) {
-      state.hasAuth = authState;
-      localStorage.setItem('auth', authState);
+    setUser(state, val) {
+      state.user = val;
+      localStorage.setItem('user', val);
     }
   },
   actions: {
-    toggleLoading({ commit, state }, loadingState) {
+    toggleLoading({ state, commit }, loadingState) {
       clearTimeout(state.loadingTimeout);
 
       if (loadingState) {
@@ -27,8 +27,15 @@ const store = Vuex.createStore({
         commit('toggleLoading', loadingState);
       }
     },
-    toggleAuth({ commit }, authState) {
-      commit('toggleAuth', authState);
+    toggleUser({ state, commit }, newVal) {
+      const val = newVal ? newVal : state.user === 'guest' ? 'admin' : 'guest';
+
+      commit('setUser', val);
+    },
+  },
+  getters: {
+    hasAuth(state) {
+      return state.user !== 'guest';
     },
   },
 });

@@ -88,11 +88,10 @@ const template = `
               </button>
             </li>
             <li>
-              <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="toggleAuth">
-                <i v-if="hasAuth" class="bi bi-unlock-fill"></i>
-                <i v-else class="bi bi-lock-fill"></i>
-                Auth
-                <i v-if="hasAuth" class="bi bi-check2 ms-auto"></i>
+              <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="toggleUser">
+                <i v-if="hasAuth" class="bi bi-unlock-fill me-2"></i>
+                <i v-else class="bi bi-lock-fill me-2"></i>
+                User
               </button>
             </li>
           </ul>
@@ -112,7 +111,7 @@ export default {
   },
   computed: {
     hasAuth() {
-      return this.$store.state.hasAuth;
+      return this.$store.getters.hasAuth;
     },
   },
   created() {
@@ -143,10 +142,8 @@ export default {
 
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     },
-    toggleAuth() {
-      const newAuth = !this.hasAuth;
-
-      this.$store.dispatch('toggleAuth', newAuth);
+    toggleUser() {
+      this.$store.dispatch('toggleUser', val);
     },
   },
   template,
