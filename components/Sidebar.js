@@ -7,13 +7,10 @@ const template = `
     </div>
     <div class="offcanvas-body">
       <nav class="nav flex-column nav-pills mb-auto w-100">
-        <router-link to="warehouse" class="nav-link mb-1" active-class="active">Lager</router-link>
-        <router-link to="turnover" class="nav-link mb-1" active-class="active">Umsatz</router-link>
-        <h6 class="d-flex align-items-center fw-semibold mt-4 mb-3">
-          <i class="bi bi-code-slash me-2"></i> 
-          Experimental
-        </h6>
-        <router-link to="test" class="nav-link mb-1" active-class="active">Test</router-link>
+        <router-link v-if="!requiresAuth || currentPath === 'status'" to="status" class="nav-link mb-1" active-class="active">Status</router-link>
+        <router-link v-if="!requiresAuth || currentPath === 'turnover'" to="turnover" class="nav-link mb-1" active-class="active">Umsatz</router-link>
+        <router-link v-if="!requiresAuth || currentPath === 'warehouse'" to="warehouse" class="nav-link mb-1" active-class="active">Lager</router-link>
+        <router-link v-if="!requiresAuth || currentPath === 'lorem-ipsum'" to="lorem-ipsum" class="nav-link mb-1" active-class="active">Lorem ipsum</router-link>
       </nav>
     </div>
   </aside>
@@ -25,6 +22,14 @@ export default {
     return {
       //
     };
+  },
+  computed: {
+    currentPath() {
+      return this.$route.path.slice(1);
+    },
+    requiresAuth() {
+      return !this.$route.meta.requiresAuth;
+    },
   },
   created() {
     console.log('Sidebar: created');

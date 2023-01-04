@@ -9,7 +9,7 @@ const template = `
       <i v-else class="bi bi-circle-half me-1"></i>
       <span class="d-none ms-2">Toggle theme</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end p-1">
+    <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
       <li>
         <button type="button" class="dropdown-item d-flex align-items-center rounded mb-1" :class="{'active': selectedTheme === 'light'}" @click="setTheme('light')">
           <i class="bi bi-sun-fill me-2 opacity-50"></i>

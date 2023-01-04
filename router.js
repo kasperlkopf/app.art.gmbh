@@ -8,26 +8,37 @@ const router = VueRouter.createRouter({
     {
       path: '/',
       component: () => import('/components/Index.js'),
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
       path: '/status',
       component: () => import('/components/Status.js'),
-    },
-    {
-      path: '/lieferprobleme',
-      component: () => import('/components/DeliveryProblems.js'),
-    },
-    {
-      path: '/warehouse',
-      component: () => import('/components/Warehouse.js'),
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
       path: '/turnover',
       component: () => import('/components/Turnover.js'),
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
-      path: '/test',
-      component: () => import('/components/Test.js'),
+      path: '/warehouse',
+      component: () => import('/components/Warehouse.js'),
+      meta: {
+        requiresAuth: false,
+      },
+    },
+    {
+      path: '/lorem-ipsum',
+      component: () => import('/components/LoremIpsum.js'),
+      meta: {
+        requiresAuth: true,
+      },
     },
   ],
 });
