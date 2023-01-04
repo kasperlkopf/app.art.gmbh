@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     availableRoutes() {
-      const routes = this.$router.routes.slice();
+      const routes = this.$router.getRoutes();
 
       return routes.filter((el) => !el.meta.requiresAuth || (el.meta.requiresAuth && this.hasAuth));
     },
@@ -37,13 +37,6 @@ export default {
   },
   created() {
     console.log('Sidebar: created');
-
-    console.log(this.$router);
-    console.log(this.$route);
-
-    const we = this.$router.getRoutes();
-
-    console.log(we);
   },
   template,
 };
