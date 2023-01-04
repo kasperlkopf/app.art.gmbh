@@ -10,6 +10,7 @@ const template = `
         <router-link v-for="route in availableRoutes" :to="route.path" class="nav-link mb-1" active-class="active">{{ route.name }}</router-link>
       </nav>
     </div>
+    <div class="text-body">auth: {{ hasAuth }}</div>
   </aside>
 `;
 

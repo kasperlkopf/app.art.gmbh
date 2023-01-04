@@ -52,9 +52,7 @@ router.beforeEach((to, from, next) => {
     store.dispatch('toggleAuth', false);
 
     next({ path: '/status' });
-  }
-
-  if (to.meta.requiresAuth) {
+  } else if (to.meta.requiresAuth) {
     const hasAuth = store.getters.hasAuth;
 
     if (hasAuth) {
