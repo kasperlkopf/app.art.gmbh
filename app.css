@@ -22,7 +22,7 @@ body {
 /* header */
 
 #app header .btn.btn-link {
-  color: rgba(var(--bs-body-color-rgb),var(--bs-text-opacity));
+  color: var(--bs-body-color);
 }
 
 #app header .btn.btn-link:hover {
