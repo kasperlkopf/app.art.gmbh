@@ -122,6 +122,8 @@ export default {
   },
   created() {
     console.log('Header: created');
+
+    this.setTheme();
   },
   methods: {
     setTheme(t) {
