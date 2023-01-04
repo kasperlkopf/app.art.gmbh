@@ -8,7 +8,7 @@ const template = `
         <i class="bi bi-three-dots-vertical"></i>
       </button>
 
-      <a class="navbar-brand" href="#"> 
+      <div class="navbar-brand"> 
         <svg class="art-logo d-block" style="height: 28px; margin: 5px 0;" viewBox="0 0 333 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g fill-rule="nonzero">
@@ -41,7 +41,7 @@ const template = `
             </g>
           </g>
         </svg>
-      </a>
+      </div>
 
       <div class="d-flex">
         <!-- slack -->
