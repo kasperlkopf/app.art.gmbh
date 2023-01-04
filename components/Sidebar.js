@@ -14,6 +14,7 @@ const template = `
       </nav>
     </div>
   </aside>
+  {{ routes }}
 `;
 
 export default {
@@ -24,6 +25,9 @@ export default {
     };
   },
   computed: {
+    routes() {
+      return this.$router;
+    },
     currentPath() {
       return this.$route.path.slice(1);
     },
