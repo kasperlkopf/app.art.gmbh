@@ -34,6 +34,7 @@ export default {
   created() {
     console.log('Sidebar: created');
 
+    console.log('auth: ' + this.hasAuth);
     console.log(this.availableRoutes);
   },
   template,
