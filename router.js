@@ -51,7 +51,7 @@ router.beforeEach((to, from, next) => {
   }
 
   if (to.meta.requiresAuth) {
-    const hasAuth = store.getAuth();
+    const hasAuth = store.getters.hasAuth;
 
     if (hasAuth) {
       next();
