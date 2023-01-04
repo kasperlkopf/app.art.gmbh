@@ -30,6 +30,9 @@ export default {
     requiresAuth() {
       return !this.$route.meta.requiresAuth;
     },
+    hasAuth() {
+      return localStorage.getItem('auth', true);
+    },
   },
   created() {
     console.log('Sidebar: created');
