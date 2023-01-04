@@ -10,7 +10,6 @@ const template = `
         <router-link v-for="route in availableRoutes" :to="route.path" class="nav-link mb-1" active-class="active">{{ route.name }}</router-link>
       </nav>
     </div>
-    <div class="text-body">auth: {{ hasAuth }}</div>
   </aside>
 `;
 
@@ -25,11 +24,15 @@ export default {
     availableRoutes() {
       const routes = this.$router.getRoutes();
 
+      return routes.filter((el) => !this.hasAuth && !el.meta.requiresAuth);
+
+      /*
       if (this.hasAuth) {
         return routes;
       } else {
         return routes.filter((el) => !el.meta.requiresAuth);
       }
+      */
     },
     hasAuth() {
       return this.$store.state.hasAuth;
@@ -37,9 +40,6 @@ export default {
   },
   created() {
     console.log('Sidebar: created');
-
-    console.log('auth: ' + this.hasAuth);
-    console.log(this.availableRoutes);
   },
   template,
 };
