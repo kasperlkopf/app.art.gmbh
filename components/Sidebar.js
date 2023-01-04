@@ -39,6 +39,11 @@ export default {
     console.log('Sidebar: created');
 
     console.log(this.$router);
+    console.log(this.$route);
+
+    const we = this.$router.getRoutes();
+
+    console.log(we);
   },
   template,
 };
