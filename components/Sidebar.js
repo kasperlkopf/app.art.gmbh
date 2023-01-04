@@ -37,7 +37,7 @@ export default {
   created() {
     console.log('Sidebar: created');
 
-    console.log(availableRoutes);
+    console.log(this.availableRoutes);
   },
   template,
 };
