@@ -131,7 +131,7 @@ export default {
       this.isBusy = true;
       action.status = 'loading';
 
-      fetch('/' + action.url + '?ts=' + Date.now())
+      fetch('https://api.art.gmbh/' + action.url + '?ts=' + Date.now())
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
