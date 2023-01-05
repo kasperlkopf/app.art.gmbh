@@ -1,6 +1,6 @@
 // Status.js
 
-import StatusIcon from './components/StatusIcon.js';
+import StatusIcon from '../components/StatusIcon.js';
 
 const template = `
   <div class="status">

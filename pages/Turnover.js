@@ -1,6 +1,6 @@
 // Turnover.js
 
-import SharedMethods from './components/SharedMethods.js';
+import SharedMethods from '../components/SharedMethods.js';
 
 const template = `
   <div class="row g-3">
