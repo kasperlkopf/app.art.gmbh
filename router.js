@@ -8,7 +8,15 @@ const router = VueRouter.createRouter({
     {
       path: '/status',
       name: 'Status',
-      component: () => import('/components/Status.js'),
+      component: () => import('/pages/Status.js'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/routines',
+      name: 'Routines',
+      component: () => import('/pages/Routines.js'),
       meta: {
         requiresAuth: true,
       },
@@ -16,7 +24,7 @@ const router = VueRouter.createRouter({
     {
       path: '/turnover',
       name: 'Umsatz',
-      component: () => import('/components/Turnover.js'),
+      component: () => import('/pages/Turnover.js'),
       meta: {
         requiresAuth: true,
       },
@@ -24,7 +32,7 @@ const router = VueRouter.createRouter({
     {
       path: '/warehouse',
       name: 'Lager',
-      component: () => import('/components/Warehouse.js'),
+      component: () => import('/pages/Warehouse.js'),
       meta: {
         requiresAuth: false,
       },
@@ -32,7 +40,7 @@ const router = VueRouter.createRouter({
     {
       path: '/lorem-ipsum',
       name: 'Lorem ipsum',
-      component: () => import('/components/LoremIpsum.js'),
+      component: () => import('/pages/LoremIpsum.js'),
       meta: {
         requiresAuth: true,
       },
