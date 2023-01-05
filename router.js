@@ -15,7 +15,7 @@ const router = VueRouter.createRouter({
     },
     {
       path: '/routines',
-      name: 'Routines',
+      name: 'Routinen',
       component: () => import('/pages/Routines.js'),
       meta: {
         requiresAuth: true,
