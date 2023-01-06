@@ -5,21 +5,23 @@ import StatusIcon from '../components/StatusIcon.js';
 const template = `
   <div class="routines">
 
-    <div v-for="routine in routines" class="list-group mb-4">
-      <header class="d-flex align-items-center list-group-item">
+    <div v-for="routine in routines" class="mb-4">
+      <header class="d-flex align-items-center mb-2">
         <div v-html="routine.icon" class="d-flex me-2"></div>
         <span class="fw-semibold">{{ routine.title }}</span>
       </header>
 
-      <button v-for="action in routine.actions" type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" @click="handleClick(action)" :disabled="isBusy">
-        <span class="text-truncate">{{ action.name }}</span>
+      <div class="list-group">
+        <button v-for="action in routine.actions" type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" @click="handleClick(action)" :disabled="isBusy">
+          <span class="text-truncate">{{ action.name }}</span>
 
-        <StatusIcon v-if="['loading', 'success', 'error'].includes(action.status)" :status="action.status" />
+          <StatusIcon v-if="['loading', 'success', 'error'].includes(action.status)" :status="action.status" />
 
-        <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-        </svg>
-      </button>
+          <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+          </svg>
+        </button>
+      </div>
     </div>
 
   </div>
