@@ -63,8 +63,11 @@ const template = `
         <!-- settings -->
         <div class="dropdown">
           <button class="btn btn-link" data-bs-toggle="dropdown" data-bs-display="static">
-            <i class="bi bi-gear-fill"></i>
+            <i v-if="selectedTheme === 'light'" class="bi bi-sun-fill"></i>
+            <i v-else-if="selectedTheme === 'dark'" class="bi bi-moon-stars-fill"></i>
+            <i v-else class="bi bi-circle-half"></i>
           </button>
+
           <ul class="dropdown-menu dropdown-menu-end p-1 shadow">
             <li><h6 class="dropdown-header">Design</h6></li>
             <li>
@@ -86,14 +89,6 @@ const template = `
                 <i class="bi bi-circle-half me-2"></i>
                 Auto
                 <i v-if="selectedTheme === 'auto'" class="bi bi-check2 ms-auto"></i>
-              </button>
-            </li>
-            <li><hr class="dropdown-divider"></li>
-            <li>
-              <button type="button" class="dropdown-item d-flex align-items-center rounded" @click="toggleUser">
-                <i v-if="hasAuth" class="bi bi-unlock-fill me-2"></i>
-                <i v-else class="bi bi-lock-fill me-2"></i>
-                {{ username }}
               </button>
             </li>
           </ul>

@@ -57,6 +57,10 @@ router.beforeEach((to, from, next) => {
     return false;
   }
 
+  if (to.path === '/auth') {
+    store.dispatch('toggleUser');
+  }
+
   // auth
   if (to.meta.requiresAuth) {
     const hasAuth = store.getters.hasAuth;
