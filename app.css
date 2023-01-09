@@ -1,5 +1,9 @@
 /* app.css */
 
+[v-cloak] {
+  display: none;
+}
+
 body {
   overflow-y: scroll;
 }
@@ -46,6 +50,18 @@ body {
 [data-bs-theme="dark"] .dropdown-item.active {
   background-color: var(--bs-light) !important;
   color: var(--bs-dark) !important;
+}
+
+/* list-group-item-action arrow / routines & backups */
+
+.routines .list-group-item-action i.bi-arrow-right-short,
+.backups .list-group-item-action i.bi-arrow-right-short {
+  transition: transform 0.1s;
+}
+
+.routines .list-group-item-action:hover i.bi-arrow-right-short,
+.backups .list-group-item-action:hover i.bi-arrow-right-short {
+  transform: translateX(2px);
 }
 
 /* input date */
@@ -168,12 +184,6 @@ input::-webkit-inner-spin-button {
    animations can be calculated correctly. */
 .list-leave-active {
   position: absolute;
-}
-
-/* cloak */
-
-[v-cloak] {
-  display: none;
 }
 
 /* modal */
