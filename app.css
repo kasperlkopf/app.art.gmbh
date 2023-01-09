@@ -16,6 +16,10 @@ body {
   }
 }
 
+.container {
+  max-width: 960px !important;
+}
+
 /* logo */
 
 [data-bs-theme="dark"] .art-logo g,

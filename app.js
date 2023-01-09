@@ -28,7 +28,7 @@ const app = Vue.createApp({
   template: `
     <Header />
 
-    <div class="container-xxl">
+    <div class="container">
       <Sidebar />
 
       <main class="py-3">

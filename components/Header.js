@@ -2,7 +2,7 @@
 
 const template = `
   <header class="navbar navbar-expand-md sticky-top border-bottom bg-body bg-opacity-75" style="backdrop-filter: blur(12px);">
-    <nav class="container-xxl flex-wrap flex-nowrap">
+    <nav class="container flex-wrap flex-nowrap">
 
       <button class="btn btn-link d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
         <i class="bi bi-three-dots-vertical"></i>
