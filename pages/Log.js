@@ -1,7 +1,7 @@
 // Log.js
 
 const template = `
-  <div class="log">
+  <div class="log text-break">
 
     <!-- loading -->
     <div v-if="isLoading" class="progress-bar-custom position-relative mb-3">
