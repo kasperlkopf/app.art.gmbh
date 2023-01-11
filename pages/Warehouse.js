@@ -32,6 +32,9 @@ export default {
 
     this.getLabelPrinterPath();
   },
+  activated() {
+    this.getLabelPrinterPath();
+  },
   watch: {
     selectedPrinterPath(newVal, oldVal) {
       console.log(newVal);
