@@ -58,7 +58,7 @@ const template = `
     </div>
 
     <div class="col-12">
-      <div class="card border-success">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Jahresumsatz</h5>
           <h6 class="card-subtitle mb-2 text-body-tertiary">{{ formatDate({year: 'numeric'}) }}</h6>
