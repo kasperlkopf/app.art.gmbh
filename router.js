@@ -45,6 +45,22 @@ const router = VueRouter.createRouter({
         requiresAuth: true,
       },
     },
+    {
+      path: '/attendances',
+      name: 'Anwesenheiten',
+      component: () => import('/pages/Attendances.js'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/log',
+      name: 'Log',
+      component: () => import('/pages/Log.js'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
   ],
 });
 
