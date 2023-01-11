@@ -12,7 +12,7 @@ const template = `
       <span v-for="i in 10" :key="i" class="placeholder rounded opacity-25 w-100"></span>
     </div>
 
-    <div v-for="item, index in logEntries" :key="index" class="font-monospace text-nowrap">
+    <div v-for="item, index in logEntries" :key="index" class="font-monospace">
       {{ item }}
     </div>
 
