@@ -32,10 +32,14 @@ export default {
     console.log('Log: created');
 
     this.isLoading = true;
+  },
+  activated() {
+    console.log('Log: activated');
+
     this.interval = setInterval(() => this.getLog(), 2000);
   },
-  unmounted() {
-    console.log('Log: unmounted');
+  deactivated() {
+    console.log('Log: deactivated');
 
     clearInterval(this.interval);
   },
